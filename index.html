@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>UX workflow shifts (2026) — A report</title>
-<meta name="description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta name="description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
 <meta name="author" content="Uday Gajendar">
 <link rel="canonical" href="https://udanium.github.io/ux-workflow-2026/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UX workflow shifts (2026) — A report">
-<meta property="og:description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta property="og:description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
 <meta property="og:url" content="https://udanium.github.io/ux-workflow-2026/">
-<meta property="og:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v2.png">
+<meta property="og:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v3.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1254">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="UX workflow shifts (2026) — A report">
-<meta name="twitter:description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
-<meta name="twitter:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v2.png">
+<meta name="twitter:description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta name="twitter:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v3.png">
 <meta name="theme-color" content="#EDEFF3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
 <script>
@@ -157,6 +157,7 @@ img, svg { max-width: 100%; }
 .standfirst p { margin: 0 0 1em; max-width: 40ch; }
 .standfirst .lead { font-size: 1.25rem; line-height: 1.5; }
 .standfirst .meta { color: var(--ink-2); font-size: .9rem; margin-top: 1.6em; }
+.standfirst .meta.update { margin-top: -.3em; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
 /* Then and now */
@@ -520,6 +521,18 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .role-facts { list-style: none; margin: 1.4em 0 0; padding: 0; }
 .role-facts li { border-top: 1px solid var(--rule-soft); padding: 12px 0; font-size: 1rem; }
 .role-facts strong { display: block; font-weight: 600; margin-bottom: .15em; }
+.adopt { margin: 0 0 clamp(56px, 8vw, 104px); max-width: 900px; }
+.adopt-intro { margin: 0 0 18px; max-width: 60ch; color: var(--ink-2); }
+.adopt-frame { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) auto; gap: 8px 10px; }
+.adopt-y { grid-column: 1; grid-row: 1; margin: 0; writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; font-size: .85rem; color: var(--ink-2); }
+.adopt-y::after, .adopt-x::after { content: " \2192"; }
+.adopt-grid { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.adopt-x { grid-column: 2; grid-row: 2; margin: 0; text-align: center; font-size: .85rem; color: var(--ink-2); }
+.adopt-cell { background: var(--surface); background: color-mix(in srgb, var(--ink) calc(var(--s) * 1%), var(--canvas)); border-radius: 6px; padding: 18px 20px 20px; }
+.adopt-cell h4 { font-family: var(--display); font-weight: 650; font-size: 1.25rem; margin: 0 0 .3em; font-variation-settings: "opsz" 28; }
+.adopt-cell p { margin: 0; font-size: .95rem; color: var(--ink-2); }
+.adopt-cell .ad-share { font-family: var(--display); font-weight: 650; font-size: 2rem; line-height: 1; color: var(--ink); margin-bottom: .3em; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) { .adopt-cell { padding: 14px; } .adopt-cell p { font-size: .875rem; } .adopt-cell .ad-share { font-size: 1.6rem; } }
 .tensions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 5vw, 72px); }
 .tensions li { border-top: 1px solid var(--rule-soft); padding: 22px 0 26px; }
 .tensions h4 { font-family: var(--display); font-weight: 650; font-size: 1.3rem; letter-spacing: -.01em; margin: 0 0 .5em; font-variation-settings: "opsz" 28; }
@@ -633,6 +646,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
           <p>Agents now work on the canvas and in code. The Model Context Protocol carries context between design files, design systems, research and code. Skills turn a team’s conventions into instructions agents follow.</p>
           <p>When producing UI costs little, the value moves to framing problems, building context and judging what comes back.</p>
           <p class="meta">Note: This started from a personal wish to understand where UX and AI stand today. I cross-connected multiple reports using Perplexity Computer, and I’m sharing the result with my network. Prepared October 22, 2026.</p>
+          <p class="meta update">Updated October 23, 2026: added Figma’s 2026 AI report, DESIGN.md and David Hoang’s ledger of design, which the original analysis missed.</p>
         </div>
 
         <div class="compare">
@@ -650,10 +664,11 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             <li class="row"><span class="dim">Research synthesis</span><span class="val"><span class="v before"><i class="mark"></i>Manual affinity mapping</span><span class="v after"><i class="mark agent"></i>AI-moderated interviews and cited synthesis</span></span></li>
             <li class="row"><span class="dim">Designer’s role</span><span class="val"><span class="v before"><i class="mark"></i>Maker of screens</span><span class="v after"><i class="mark human"></i>Director and curator of agent output</span></span></li>
             <li class="row"><span class="dim">Toolstack</span><span class="val"><span class="v before"><i class="mark"></i>About 3 AI tools</span><span class="v after"><i class="mark infra"></i>About 7, plus tools the team builds</span></span></li>
+            <li class="row"><span class="dim">Crossing roles</span><span class="val"><span class="v before"><i class="mark"></i>44% of developers did design work, in 2025</span><span class="v after"><i class="mark human"></i>60% of developers design; 41% of designers code</span></span></li>
           </ul>
           <div class="scrub">
             <span aria-hidden="true">Before</span>
-            <input type="range" id="scrub" min="0" max="9" step="1" value="0" aria-label="Compare the workflow before and in 2026">
+            <input type="range" id="scrub" min="0" max="10" step="1" value="0" aria-label="Compare the workflow before and in 2026">
             <span aria-hidden="true">2026</span>
           </div>
           <ul class="legend">
@@ -711,6 +726,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
               <div><dt>57.3%</dt><dd>of designers use AI for prototyping and wireframing, up from about 20% a year earlier. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></dd></div>
               <div><dt>71.4%</dt><dd>use Figma Make, which didn’t appear in the previous year’s report. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></dd></div>
               <div><dt>43%</dt><dd>of companies now expect working prototypes. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></dd></div>
+              <div><dt>61%</dt><dd>of product builders make interactive prototypes, up from 10% a year earlier. <a class="src" href="https://www.figma.com/reports/">Figma</a></dd></div>
               <div><dt>20%</dt><dd>of respondents call themselves design engineers. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></dd></div>
             </dl>
             <p>The tools caught up during the year. Figma’s Code Layers brought Make’s code-backed prototyping onto the design canvas, and Make gained the ability to work directly in a production codebase. It can now scaffold a backend with a CMS, database and authentication, which turns prototypes into production apps. <a class="src" href="https://www.figma.com/release-notes/">Figma release notes</a></p>
@@ -730,6 +746,12 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             </ul>
             <p>Teams also increasingly design for AI agents as users: agents that browse, compare and act on a product on a person’s behalf. <a class="src" href="https://www.aufaitux.com/blog/ui-ux-trends/">AufaitUX</a></p>
             <p>One practitioner argues the deliverable becomes “a behavior specification” rather than a Figma file. <a class="src" href="https://shumin.design/blog/ai-agent-design-2026/">Shumin</a></p>
+            <dl class="figs">
+              <div><dt>83%</dt><dd>of product builders are building AI-powered projects, up from 65% a year earlier. <a class="src" href="https://www.figma.com/reports/">Figma</a></dd></div>
+              <div><dt>46%</dt><dd>say at least half their work is AI products or features, up from 23%. <a class="src" href="https://www.figma.com/reports/">Figma</a></dd></div>
+            </dl>
+            <p class="sub-head">A ledger of judgment</p>
+            <p class="ledger">David Hoang argues that when finished-looking output is cheap, the artifact no longer proves the work. Credibility has to come from the decision trail: the context gathered, the options rejected and the tradeoffs made. Agents need the same trail, and he names four requirements for trusting their work: visible execution, scoped access, reviewable history and reversible actions. <a class="src" href="https://www.proofofconcept.pub/p/the-ledger-of-design">Proof of Concept</a></p>
           </article>
 
           <article class="shift-panel" id="shift-canvas" tabindex="-1" aria-labelledby="sp2" hidden>
@@ -792,6 +814,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
               <div><dt>27%</dt><dd>fewer tokens <a class="src" href="https://storybook.js.org/blog/how-to-document-your-design-system-best-practices-tools/">Storybook</a></dd></div>
             </dl>
             <p>The reach goes well beyond Figma. Uber runs an internal MCP server for its Base design system, and Atlassian offers a server and a CLI for its own. Lyssna and Great Question let teams query research studies from Claude or ChatGPT, and coding agents can now read and write FigJam boards.</p>
+            <p class="fig-loop">Figma’s 2026 survey describes the result as a continuous loop: anyone can start in code or on the canvas and move between them before shipping, and over half of respondents say they’ve stopped using linear handoffs entirely. Teams still differ on how they move: 37% work sequentially, 32% in iterative rounds and 23% in parallel. <a class="src" href="https://www.figma.com/reports/">Figma</a></p>
             <div class="implication">
               <p class="imp-head">What it means for the process</p>
               <p>The handoff becomes a continuous loop rather than a single moment. Keeping design and code in sync becomes ongoing infrastructure work.</p>
@@ -834,6 +857,9 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
               <div><h4>Task-based routing</h4><p>Each task is sent to the context files it needs.</p></div>
             </div>
             <p>zeroheight’s 2026 outlook names three priorities: MCP servers with skills and guidelines, designing in code, and documenting the when and why behind components. <a class="src" href="https://state-of-ai-in-design-systems.netlify.app/reading">State of AI in Design Systems</a></p>
+            <p class="sub-head">One file for people and agents</p>
+            <p class="dmd-spec">The static-file approach now has an open format. Google Labs open-sourced DESIGN.md in April 2026: one plain-text file at the root of the repository, with machine-readable tokens at the top and the rationale behind them, written for people, below. A command-line tool lints the file and exports its tokens. <a class="src" href="https://github.com/google-labs-code/design.md">Google Labs</a></p>
+            <p class="dmd-view">Patrick Neeman argues it’s the standard file design needs for the agent era, the one place both a team and its agents read as truth. Not everyone is convinced: one critic points out that design tokens already have formats such as W3C DTCG and Tailwind, so DESIGN.md adds a layer rather than consolidating them. <a class="src" href="https://uxdesign.cc/design-md-the-one-standard-file-carries-your-visual-identity-for-humans-and-agents-9058d5b39d9b">UX Collective</a>, <a class="src" href="https://thalion.substack.com/p/designmd-new-standard-or-temporary">Thalion</a></p>
             <p class="sub-head">Demand is ahead of practice</p>
             <div class="bars" role="img" aria-label="57% are excited about AI documentation generation, but only 12% use AI to deliver documentation to the tools that need it.">
               <div class="metric wide"><span class="m-name">Excited about AI-generated docs</span><div class="m-bars"><div class="b" style="--w:57%">57%</div></div></div>
@@ -1283,13 +1309,35 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             <div class="metric wide"><span class="m-name">Say PMs and engineers do more design work</span><div class="m-bars"><div class="b now" style="--w:40%">40%</div></div></div>
           </div>
           <p class="caption"><a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+          <div class="bars" role="img" aria-label="60% of developers now do design work, up from 44%; 41% of designers do development, up from 21%.">
+            <div class="metric wide"><span class="m-name">Developers doing design work (44% a year earlier)</span><div class="m-bars"><div class="b now" style="--w:60%">60%</div></div></div>
+            <div class="metric wide"><span class="m-name">Designers doing development (21% a year earlier)</span><div class="m-bars"><div class="b now" style="--w:41%">41%</div></div></div>
+          </div>
+          <p class="caption"><a class="src" href="https://www.figma.com/reports/">Figma</a></p>
           <ul class="role-facts">
             <li><strong>Ownership is less clear.</strong>A third of designers say collaboration is messier because of it. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></li>
             <li><strong>Leaders are building.</strong>Design leaders and managers ship code as much as individual contributors, and sometimes more. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></li>
             <li><strong>The labor market is uneven.</strong>Senior and generalist roles are recovering faster than entry-level ones. <a class="src" href="https://thehuman2ai.com/research/radar/nngroup-state-of-ux-2026">NN/g</a></li>
             <li><strong>Work is moving, not disappearing.</strong>Adobe’s research finds creative work being redistributed rather than replaced. <a class="src" href="https://www.adobe.com/cc-shared/assets/ai/research/adobe-ai-research-june-2026-how-ai-is-redistributing-creative-work.pdf">Adobe</a></li>
+            <li><strong>Design matters more, not less.</strong>57% of product builders say design is more important than before AI, and 65% of developers do. 90% say it’s at least as important. <a class="src" href="https://www.figma.com/reports/">Figma</a></li>
           </ul>
         </div>
+      </div>
+
+      <div class="adopt">
+        <h3 class="sub-title">How teams adopt matters as much as whether they do</h3>
+        <p class="adopt-intro">Figma’s survey sorts organizations by two speeds: how fast individuals adopt AI, and how fast the organization does.</p>
+        <div class="adopt-frame">
+          <p class="adopt-y" aria-hidden="true">Organization adopts faster</p>
+          <div class="adopt-grid">
+            <div class="adopt-cell" style="--s:10"><p class="ad-share">27%</p><h4>Directive</h4><p>Leadership pushes AI, and teams scramble to keep up. Over two years they made the biggest gains in productivity, tools and collaboration.</p></div>
+            <div class="adopt-cell" style="--s:15"><p class="ad-share">36%</p><h4>Unified</h4><p>Individuals and the organization move together. The only group whose productivity beat last year’s expectations, and up 83% since 2024.</p></div>
+            <div class="adopt-cell" style="--s:6"><p class="ad-share">18%</p><h4>Nascent</h4><p>Slow on both sides, often because of regulation or structure. The largest group two years ago, now the smallest.</p></div>
+            <div class="adopt-cell" style="--s:8"><p class="ad-share">20%</p><h4>Grassroots</h4><p>Individuals push ahead of their organization. The widest gap between expectations and what ships: 35 points on Figma’s impact index.</p></div>
+          </div>
+          <p class="adopt-x" aria-hidden="true">Individuals adopt faster</p>
+        </div>
+        <p class="caption adopt-caption">Companies training staff in AI nearly doubled, from 28% in 2024 to 54%. <a class="src" href="https://www.figma.com/reports/">Figma</a></p>
       </div>
 
       <h3 class="sub-title">Six tensions</h3>
@@ -1322,9 +1370,10 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
           <button class="text-btn t-jump" type="button" data-area="9">Checklist: Uphold ethics and accountability</button>
         </li>
         <li>
-          <h4>Thinning collaboration</h4>
-          <p class="t-fig"><span class="t-num">4×</span><span>as many designers report less collaboration because of AI as a year earlier.</span></p>
-          <p>Designers describe more solo work and more time spent prompting and in terminals. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+          <h4>Collaboration: thinning or widening?</h4>
+          <p class="t-fig"><span class="t-num">4×</span><span>as many designers report less collaboration because of AI as a year earlier, describing more solo work and more time prompting. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></span></p>
+          <p class="t-fig"><span class="t-num">6×</span><span>as many product builders say AI has significantly changed how their team works together as two years ago. <a class="src" href="https://www.figma.com/reports/">Figma</a></span></p>
+          <p>The surveys may be measuring different things. Figma’s includes developers and product managers, and its numbers point to more work across roles. Neither shows whether collaboration among designers themselves is growing or shrinking.</p>
           <button class="text-btn t-jump" type="button" data-area="7">Checklist: Sustain collaboration and learning</button>
         </li>
       </ul>
@@ -1340,7 +1389,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
 
       <div class="cl">
         <div class="cl-overall">
-          <p class="cl-count" id="cl-count">0 of 51 done</p>
+          <p class="cl-count" id="cl-count">0 of 53 done</p>
           <div class="cl-bar" aria-hidden="true"><span id="cl-bar"></span></div>
           <p class="cl-status" id="cl-status">Your progress is saved in this browser.</p>
         </div>
@@ -1372,7 +1421,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
     <div class="wrap">
       <div class="section-intro">
         <h2 id="takeaways-title">What this means for design leaders</h2>
-        <p>Six takeaways drawn from the evidence above. Two are about the infrastructure agents depend on. Four are about the human work around it.</p>
+        <p>Seven takeaways drawn from the evidence above. Two are about the infrastructure agents depend on. Five are about the human work around it.</p>
       </div>
 
       <div class="impl-group">
@@ -1432,6 +1481,14 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
               <button class="text-btn" type="button" data-area="6">Checklist: Protect research rigor</button>
             </div>
           </li>
+          <li>
+            <h3>Keep a ledger of judgment</h3>
+            <p>When finished-looking work is cheap, credibility comes from the trail behind it: the context, the options rejected and the tradeoffs made. The same trail is what lets people trust what agents did.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-shift="shift-object">Shift: What designers design</button>
+              <button class="text-btn" type="button" data-area="4">Checklist: Set up MCP and tool integrations safely</button>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -1457,12 +1514,12 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
 
 <footer>
   <div class="wrap">
-    <p>Most figures come from three surveys: Designer Fund and Foundation Capital (900 designers in more than 60 countries), Designlab (more than 200 designers, late 2025), and NN/g’s qualitative State of UX 2026.</p>
+    <p>Most figures come from four surveys: Figma’s 2026 AI report (4,392 responses from designers, developers and product managers, weighted to Figma’s paid user base), Designer Fund and Foundation Capital (900 designers in more than 60 countries), Designlab (more than 200 designers, late 2025), and NN/g’s qualitative State of UX 2026.</p>
     <p>Most Double Diamond revisions come from vendors or practitioners and haven’t been tested. Tool capabilities and benchmarks are self-reported by vendors.</p>
     <details class="refs" id="references">
-      <summary>References and tools <span class="refs-count">60 sources</span></summary>
+      <summary>References and tools <span class="refs-count">65 sources</span></summary>
       <div class="refs-body">
-        <p class="refs-intro">Every source cited in the underlying report, grouped by the same evidence types the lens uses. Each note says what the source supports here.</p>
+        <p class="refs-intro">Every source cited in the underlying report, plus five added in the October 23 update, grouped by the same evidence types the lens uses. Each note says what the source supports here.</p>
         <div class="refs-group">
           <h3>Tools used</h3>
           <ul>
@@ -1482,16 +1539,17 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
           </ul>
         </div>
         <div class="refs-group">
-          <h3>Surveys <span class="refs-n">4</span></h3>
+          <h3>Surveys <span class="refs-n">5</span></h3>
           <ul>
             <li><a href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a>: 2026 survey of about 900 designers: AI use, toolstack, collaboration and learning.</li>
             <li><a href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a>: AI in UX and Product Design Survey Report 2026.</li>
+            <li><a href="https://www.figma.com/reports/">Figma</a>: 2026 AI report: 4,392 survey responses and 639 interviews with designers, developers and product managers.</li>
             <li><a href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a>: Findings from the same survey: prototypes, design engineers, ownership and output quality.</li>
             <li><a href="https://jakobnielsenphd.substack.com/p/ux-roundup-20261019">Jakob Nielsen</a>: UX Roundup, October 19, 2026: survey of 443 designers on AI use by phase.</li>
           </ul>
         </div>
         <div class="refs-group">
-          <h3>Vendor and product sources <span class="refs-n">24</span></h3>
+          <h3>Vendor and product sources <span class="refs-n">25</span></h3>
           <ul>
             <li><a href="https://www.adobe.com/cc-shared/assets/ai/research/adobe-ai-research-june-2026-how-ai-is-redistributing-creative-work.pdf">Adobe</a>: How AI is redistributing creative work, June 2026.</li>
             <li><a href="https://www.anthropic.com/news/claude-design-anthropic-labs">Anthropic</a>: Launch of Claude Design, April 17, 2026.</li>
@@ -1510,6 +1568,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             <li><a href="https://help.figma.com/hc/en-us/articles/39252411778583-Figma-MCP-server-FAQs">Figma Help Center</a>: Figma MCP server FAQs.</li>
             <li><a href="https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server">Figma Help Center</a>: Setting up the remote Figma MCP server.</li>
             <li><a href="https://investor.figma.com/news-events/news/news-details/2026/Figma-Announces-Second-Quarter-2026-Financial-Results/default.aspx">Figma investor relations</a>: Second-quarter 2026 results: Code Layers and Make in production codebases.</li>
+            <li><a href="https://github.com/google-labs-code/design.md">Google Labs on GitHub</a>: The open DESIGN.md format specification and command-line tool.</li>
             <li><a href="https://www.headway.io/even-keeled/design-systems-for-ai-and-agentic-development">Headway</a>: Three ways to feed design-system context to agents.</li>
             <li><a href="https://www.headway.io/blog/design-systems-for-ai-agents">Headway</a>: What makes a design system agent-ready.</li>
             <li><a href="https://www.lyssna.com/blog/ai-ux-research-tools/">Lyssna</a>: AI UX research tools, including synthetic participants.</li>
@@ -1520,7 +1579,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
           </ul>
         </div>
         <div class="refs-group">
-          <h3>Expert and practitioner writing <span class="refs-n">26</span></h3>
+          <h3>Expert and practitioner writing <span class="refs-n">29</span></h3>
           <ul>
             <li><a href="https://www.aacsb.edu/insights/articles/2026/06/when-post-it-notes-are-not-enough">AACSB</a>: The Augmented Double Diamond in business-school teaching.</li>
             <li><a href="https://agentmarketcap.ai/blog/2026/04/09/agent-native-ux-patterns-2026-human-agent-collaboration">Agent Market Cap</a>: Agent-native UX patterns for human–agent collaboration.</li>
@@ -1528,6 +1587,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             <li><a href="https://agenticdesign.school/articles/orchestrating-a-design-team-of-agents">Agentic Design School</a>: Orchestrating a design team of agents.</li>
             <li><a href="https://asdlc.io/patterns/agentic-double-diamond/">ASDLC</a>: The Agentic Double Diamond pattern, July 2026.</li>
             <li><a href="https://www.aufaitux.com/blog/ui-ux-trends/">AufaitUX</a>: Designing for AI agents as users.</li>
+            <li><a href="https://www.proofofconcept.pub/p/the-ledger-of-design">David Hoang, Proof of Concept</a>: The ledger of design: credibility through the decision trail, August 23, 2026.</li>
             <li><a href="https://www.designcouncil.org.uk/resources/systemic-design-framework/">Design Council</a>: The Systemic Design Framework, 2021.</li>
             <li><a href="https://www.designersforest.com/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software/">Designers Forest</a>: Patrick Neeman’s single diamond.</li>
             <li><a href="https://doublediamond.substack.com/p/a2d2-framework-double-diamond-in">Double Diamond Substack</a>: The A2D2 framework.</li>
@@ -1540,10 +1600,12 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
             <li><a href="https://www.nngroup.com/articles/state-of-ux-2026/">Nielsen Norman Group</a>: State of UX 2026.</li>
             <li><a href="https://www.nngroup.com/articles/design-process-isnt-dead/">Nielsen Norman Group</a>: The design process isn’t dead: compressed, not dead.</li>
             <li><a href="https://pathmode.io/blog/the-double-diamond-is-cracking">Pathmode</a>: The Intent Loop.</li>
+            <li><a href="https://uxdesign.cc/design-md-the-one-standard-file-carries-your-visual-identity-for-humans-and-agents-9058d5b39d9b">Patrick Neeman, UX Collective</a>: DESIGN.md as one standard file for humans and agents.</li>
             <li><a href="https://qualz.ai/blog/double-diamond-dead-ai-augmented-research-process/">Qualz</a>: A spiral model for AI-augmented research.</li>
             <li><a href="https://rogerwong.me/2026/03/the-design-process-is-dead-jenny-wen-head-of-design-at-claude">Roger Wong</a>: Notes on Jenny Wen’s interview, including her time spent prototyping.</li>
             <li><a href="https://shumin.design/blog/ai-agent-design-2026/">Shumin</a>: The deliverable as a behavior specification.</li>
             <li><a href="https://www.socialscript.in/blog/ai-design-agents-reshaping-ui-workflows-2026">SocialScript</a>: Prompt-to-product design agents.</li>
+            <li><a href="https://thalion.substack.com/p/designmd-new-standard-or-temporary">Thalion</a>: A critique of DESIGN.md as one more token standard.</li>
             <li><a href="https://thegood.com/insights/ai-research-tools/">The Good</a>: Side-by-side test of synthetic users against real users.</li>
             <li><a href="https://www.newyorker.com/culture/infinite-scroll/the-ai-design-aesthetic-thats-taking-over-the-internet">The New Yorker</a>: The look-alike AI design aesthetic.</li>
             <li><a href="https://thehuman2ai.com/research/radar/nngroup-state-of-ux-2026">thehuman2ai</a>: Summary of NN/g’s State of UX 2026.</li>
@@ -1885,7 +1947,8 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
       ['Set up Code Connect for your 10 to 15 most-used components first.', 'Figma Developer Docs', 'https://developers.figma.com/docs/figma-mcp-server/code-connect-integration/'],
       ['Document when and why to use each component, not only what it is.'],
       ['Pick one way to feed context to agents (an agents file, a design-system MCP server, or routing) and connect it.'],
-      ['Name an owner, and add automated checks that catch drift between design and code before it ships.'] ] },
+      ['Name an owner, and add automated checks that catch drift between design and code before it ships.'],
+      ['Consider a DESIGN.md file at the repository root: tokens for agents at the top, rationale for people below.', 'UX Collective', 'https://uxdesign.cc/design-md-the-one-standard-file-carries-your-visual-identity-for-humans-and-agents-9058d5b39d9b'] ] },
     { name: 'Govern the skills layer', q: 'Whose expertise are our agents applying, and who agreed to it?', items: [
       ['Inventory the skills, prompts and agents files people already use, including personal ones.'],
       ['Pick two or three recurring workflows, such as critique, state expansion, accessibility specs or interview synthesis, to turn into shared team skills.'],
@@ -1898,7 +1961,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
       ['Confirm seat and plan requirements and usage limits for MCP and agent features.', 'Figma Help Center', 'https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server'],
       ['Check data-handling terms with legal and security, especially for research data and unreleased designs.'],
       ['Decide which actions agents can take on their own and which need human approval, such as writing to shared libraries or opening pull requests.'],
-      ['Keep a record of what agents have changed in shared files and repositories.'] ] },
+      ['Keep a record of what agents were asked to do, what they accessed and what they changed in shared files and repositories.', 'Proof of Concept', 'https://www.proofofconcept.pub/p/the-ledger-of-design'] ] },
     { name: 'Redesign workflow and quality gates', q: 'Where in our process does human judgment have to happen, and is that written down?', items: [
       ['Add an explicit problem-framing step before anyone generates a prototype.'],
       ['Require two or three meaningfully different directions before converging, to counter look-alike defaults.', 'The New Yorker', 'https://www.newyorker.com/culture/infinite-scroll/the-ai-design-aesthetic-thats-taking-over-the-internet'],
@@ -1923,7 +1986,8 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
       ['Create apprenticeship paths for junior designers, such as reviewing agent output, maintaining skills and assisting with research.'],
       ['Stop measuring productivity by output volume. Track decision quality and outcomes instead.'],
       ['Build team literacy in agentic UX patterns: intent previews, autonomy controls, approvals, and audit and undo.'],
-      ['Talk openly about burnout, the pressure to produce more, and how the changes affect people’s identity as designers.'] ] },
+      ['Talk openly about burnout, the pressure to produce more, and how the changes affect people’s identity as designers.'],
+      ['Build prompt fluency: help people write specific, detailed prompts that get to something usable faster, and judge what comes back critically.', 'Figma', 'https://www.figma.com/reports/'] ] },
     { name: 'Uphold ethics and accountability', q: 'If this goes wrong, who answers for it, and to whom?', items: [
       ['Assign clear accountability for AI-generated work that ships.'],
       ['Add bias, copyright and privacy checks to design review.', 'Designlab', 'https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf'],
@@ -2183,13 +2247,13 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
   var MAP = [
     ['.rows .row:nth-child(1)', 'survey'], ['.rows .row:nth-child(2)', 'survey'], ['.rows .row:nth-child(3)', 'survey'],
     ['.rows .row:nth-child(4)', 'vendor'], ['.rows .row:nth-child(5)', 'vendor'], ['.rows .row:nth-child(6)', 'synthesis'],
-    ['.rows .row:nth-child(7)', 'vendor'], ['.rows .row:nth-child(8)', 'synthesis'], ['.rows .row:nth-child(9)', 'survey'],
+    ['.rows .row:nth-child(7)', 'vendor'], ['.rows .row:nth-child(8)', 'synthesis'], ['.rows .row:nth-child(9)', 'survey'], ['.rows .row:nth-child(10)', 'survey'],
     ['#shift-prototypes .figs > div', 'survey'], ['#shift-prototypes .figs + p', 'vendor'],
-    ['#shift-object .chips + p', 'expert'], ['#shift-object .chips + p + p', 'expert'],
+    ['#shift-object .chips + p', 'expert'], ['#shift-object .chips + p + p', 'expert'], ['#shift-object .figs > div', 'survey'], ['#shift-object .ledger', 'expert'],
     ['#shift-canvas .timeline > li', 'vendor'],
-    ['#shift-mcp .hub + p', 'vendor'], ['#shift-mcp .figs > div', 'vendor'], ['#shift-mcp .figs + p', 'vendor'],
+    ['#shift-mcp .hub + p', 'vendor'], ['#shift-mcp .figs > div', 'vendor'], ['#shift-mcp .figs + p', 'vendor'], ['#shift-mcp .fig-loop', 'survey'],
     ['#shift-skills .sp-lead + p', 'vendor'], ['#shift-skills .chips + p:not(.src)', 'vendor'], ['#shift-skills .figs > div', 'expert'],
-    ['#shift-systems .sp-lead + p', 'vendor'], ['#shift-systems .split3 + p', 'vendor'], ['#shift-systems .bars', 'survey'],
+    ['#shift-systems .sp-lead + p', 'vendor'], ['#shift-systems .split3 + p', 'vendor'], ['#shift-systems .bars', 'survey'], ['#shift-systems .dmd-spec', 'vendor'], ['#shift-systems .dmd-view', 'expert'],
     ['#shift-research .sp-lead', 'vendor'], ['#shift-research .split3 + p', 'expert'], ['#shift-research .figs > div', 'survey'],
     ['#shift-orchestration .sp-lead + p', 'expert'], ['#shift-orchestration .orch + p', 'survey'],
     ['.step[data-state="0"] .note', 'expert'],
@@ -2201,7 +2265,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
     ['.step[data-state="5"] .examples > li:nth-child(3)', 'survey'], ['.step[data-state="5"] .examples > li:nth-child(4)', 'study'],
     ['.step[data-state="5"] .note-secondhand', 'secondhand'],
     ['#roles .roles-grid > div:first-child .caption', 'survey'], ['#roles .roles-grid > div:nth-child(2) .bars', 'survey'],
-    ['#roles .role-facts > li:nth-child(1)', 'survey'], ['#roles .role-facts > li:nth-child(2)', 'survey'], ['#roles .role-facts > li:nth-child(3)', 'expert'], ['#roles .role-facts > li:nth-child(4)', 'vendor'],
+    ['#roles .role-facts > li:nth-child(1)', 'survey'], ['#roles .role-facts > li:nth-child(2)', 'survey'], ['#roles .role-facts > li:nth-child(3)', 'expert'], ['#roles .role-facts > li:nth-child(4)', 'vendor'], ['#roles .role-facts > li:nth-child(5)', 'survey'], ['#roles .adopt-caption', 'survey'],
     ['.tensions > li:nth-child(1)', 'survey'], ['.tensions > li:nth-child(2)', 'expert'], ['.tensions > li:nth-child(3)', 'expert'],
     ['.tensions > li:nth-child(4)', 'expert'], ['.tensions > li:nth-child(5)', 'survey'], ['.tensions > li:nth-child(6)', 'survey'],
     ['#model .model-note', 'synthesis'], ['#takeaways .impl-items > li', 'synthesis']
