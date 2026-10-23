@@ -1,0 +1,2285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UX workflow shifts (2026) — A report</title>
+<meta name="description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta name="author" content="Uday Gajendar">
+<link rel="canonical" href="https://udanium.github.io/ux-workflow-2026/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UX workflow shifts (2026) — A report">
+<meta property="og:description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta property="og:url" content="https://udanium.github.io/ux-workflow-2026/">
+<meta property="og:image" content="https://udanium.github.io/ux-workflow-2026/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UX workflow shifts (2026) — A report">
+<meta name="twitter:description" content="A synthesis of 60 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta name="twitter:image" content="https://udanium.github.io/ux-workflow-2026/og-image.png">
+<meta name="theme-color" content="#EDEFF3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
+<script>
+  try { var t = localStorage.getItem('uxw-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --canvas: #EDEFF3;
+  --surface: #F7F8FA;
+  --ink: #232A4D;
+  --ink-2: #565D7C;
+  --rule: #C6CAD7;
+  --rule-soft: #DADDE6;
+  --human: #B3306A;
+  --agent: #137782;
+  --infra: #8C6B12;
+  --shape-fill: rgba(35, 42, 77, .06);
+  --ghost: rgba(35, 42, 77, .38);
+  --glass: rgba(237, 239, 243, .86);
+  --header-h: 60px;
+  --display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --text: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --canvas: #151A2E;
+    --surface: #1C2139;
+    --ink: #E7E9F3;
+    --ink-2: #A6ABC4;
+    --rule: #3A4160;
+    --rule-soft: #282E49;
+    --human: #EC79A5;
+    --agent: #58C8D1;
+    --infra: #DDB75A;
+    --shape-fill: rgba(231, 233, 243, .06);
+    --ghost: rgba(231, 233, 243, .38);
+    --glass: rgba(21, 26, 46, .86);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --canvas: #151A2E;
+  --surface: #1C2139;
+  --ink: #E7E9F3;
+  --ink-2: #A6ABC4;
+  --rule: #3A4160;
+  --rule-soft: #282E49;
+  --human: #EC79A5;
+  --agent: #58C8D1;
+  --infra: #DDB75A;
+  --shape-fill: rgba(231, 233, 243, .06);
+  --ghost: rgba(231, 233, 243, .38);
+  --glass: rgba(21, 26, 46, .86);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--header-h) + 16px); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+a { color: inherit; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 2px; }
+img, svg { max-width: 100%; }
+
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  height: var(--header-h);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { font-family: var(--display); font-weight: 650; font-size: 1.05rem; letter-spacing: -.01em; text-decoration: none; font-variation-settings: "opsz" 24; }
+.site-nav { display: flex; align-items: center; gap: clamp(14px, 2.4vw, 28px); }
+.site-nav a { font-size: .95rem; color: var(--ink-2); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="true"] { color: var(--ink); }
+.site-nav a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--ink); text-underline-offset: 6px; }
+.theme-btn {
+  font: inherit; font-size: .875rem; color: var(--ink);
+  background: transparent; border: 1px solid var(--rule); border-radius: 999px;
+  padding: 5px 13px; cursor: pointer;
+}
+.theme-btn:hover { border-color: var(--ink); }
+@media (max-width: 1180px) { .site-nav .nav-link { display: none; } }
+@media (max-width: 560px) { .brand-sub { display: none; } }
+.framing { border-bottom: 1px solid var(--rule-soft); padding-bottom: clamp(32px, 4.5vw, 56px); margin-bottom: clamp(40px, 6vw, 72px); }
+.framing-inner { max-width: 62ch; }
+.framing-inner p { font-size: 1.2rem; line-height: 1.58; margin: 0 0 1em; }
+.framing-inner .byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; font-size: .95rem; line-height: 1.4; color: var(--ink-2); margin: 1.5em 0 0; }
+.byline strong { color: var(--ink); font-weight: 600; }
+
+/* Hero */
+.hero { padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 112px); }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 720;
+  font-size: clamp(2.4rem, 6.2vw, 5.4rem);
+  line-height: .97;
+  letter-spacing: -.028em;
+  font-variation-settings: "opsz" 96, "wdth" 90;
+  margin: 0 0 clamp(36px, 5.5vw, 72px);
+  max-width: 15ch;
+  overflow-wrap: break-word;
+}
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 6vw, 96px); align-items: start; }
+.standfirst p { margin: 0 0 1em; max-width: 40ch; }
+.standfirst .lead { font-size: 1.25rem; line-height: 1.5; }
+.standfirst .meta { color: var(--ink-2); font-size: .9rem; margin-top: 1.6em; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+/* Then and now */
+.compare-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; margin-bottom: 10px; }
+.compare-title { font-family: var(--display); font-weight: 650; font-size: 1.5rem; letter-spacing: -.01em; margin: 0; font-variation-settings: "opsz" 32; }
+.compare-hint { margin: 0; color: var(--ink-2); font-size: .9rem; }
+.rows { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule-soft); }
+.row { display: grid; grid-template-columns: 11.5rem minmax(0, 1fr); gap: 16px; padding: 13px 0; border-top: 1px solid var(--rule-soft); align-items: baseline; }
+.dim { color: var(--ink-2); font-size: .9rem; }
+.val { display: grid; }
+.v { grid-area: 1 / 1; transition: opacity .32s ease, transform .5s cubic-bezier(.2, .7, .2, 1); }
+.v.before { color: var(--ink-2); }
+.v.after { opacity: 0; transform: translateY(.55em); font-weight: 520; }
+.row.is-now .v.before { opacity: 0; transform: translateY(-.55em); }
+.row.is-now .v.after { opacity: 1; transform: none; }
+.mark { display: inline-block; width: .62em; height: .62em; border-radius: 2px; margin-right: .55em; vertical-align: .04em; background: var(--ink-2); }
+.mark.human { background: var(--human); }
+.mark.agent { background: var(--agent); }
+.mark.infra { background: var(--infra); }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; gap: 2px; } }
+
+.scrub { display: flex; align-items: center; gap: 14px; margin-top: 22px; }
+.scrub span { font-size: .9rem; color: var(--ink-2); white-space: nowrap; }
+.scrub input[type="range"] { flex: 1; -webkit-appearance: none; appearance: none; height: 30px; background: transparent; cursor: pointer; margin: 0; }
+.scrub input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--ink) var(--p, 0%), var(--rule) var(--p, 0%)); }
+.scrub input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--canvas); border: 2px solid var(--ink); margin-top: -9px; }
+.scrub input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--rule); }
+.scrub input[type="range"]::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--ink); }
+.scrub input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--canvas); border: 2px solid var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 18px 0 0; padding: 0; list-style: none; font-size: .875rem; color: var(--ink-2); }
+.legend .lead-in { color: var(--ink-2); }
+
+/* Diamond debate */
+.debate { border-top: 1px solid var(--rule-soft); padding-top: clamp(64px, 9vw, 120px); }
+.debate-intro { max-width: 46rem; margin-bottom: clamp(24px, 4vw, 48px); }
+.debate-intro h2 { font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 4.6vw, 3.6rem); letter-spacing: -.024em; line-height: 1; margin: 0 0 .45em; font-variation-settings: "opsz" 72, "wdth" 92; }
+.debate-intro p { margin: 0; font-size: 1.2rem; max-width: 42ch; color: var(--ink-2); }
+
+.scrolly { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); }
+.steps { grid-column: 1; grid-row: 1; padding-bottom: 32vh; }
+.fig {
+  grid-column: 2; grid-row: 1; align-self: start;
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + var(--header-h) + 12px);
+  height: calc(100vh - var(--header-h) - 24px);
+  height: calc(100svh - var(--header-h) - 24px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.fig-title {
+  font-family: var(--display); font-weight: 650;
+  font-size: clamp(1.6rem, 2.7vw, 2.5rem); line-height: 1.04; letter-spacing: -.02em;
+  margin: 0;
+  font-variation-settings: "opsz" 48, "wdth" 100;
+  transition: font-variation-settings .7s cubic-bezier(.2, .7, .2, 1);
+}
+.fig-title.narrow { font-variation-settings: "opsz" 48, "wdth" 75; }
+.fig-sub { margin: .45em 0 .4em; color: var(--ink-2); max-width: 48ch; font-size: 1rem; min-height: 3.1em; }
+.fig svg { display: block; width: 100%; height: auto; max-height: 62vh; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.tab {
+  font: inherit; font-size: .875rem; color: var(--ink-2);
+  background: transparent; border: 1px solid var(--rule); border-radius: 999px;
+  padding: 5px 12px; cursor: pointer; white-space: nowrap;
+  transition: background-color .25s, color .25s, border-color .25s;
+}
+.tab:hover { color: var(--ink); border-color: var(--ink-2); }
+.tab[aria-current="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+
+.step { min-height: 74vh; display: flex; flex-direction: column; justify-content: center; padding: 8vh 0; opacity: .38; transition: opacity .45s ease; }
+.step.active { opacity: 1; }
+.step h3 { font-family: var(--display); font-weight: 650; font-size: 1.6rem; line-height: 1.12; letter-spacing: -.014em; margin: 0 0 .5em; font-variation-settings: "opsz" 32; }
+.step > p { margin: 0 0 1em; max-width: 40ch; }
+.examples { list-style: none; margin: .6em 0 0; padding: 0; }
+.examples li { border-top: 1px solid var(--rule-soft); padding: 14px 0 16px; font-size: 1rem; }
+.examples li p { margin: .25em 0 .5em; }
+.ex-name { font-weight: 600; }
+.ex-src { color: var(--ink-2); }
+.tag { display: inline-block; font-size: .78rem; line-height: 1.4; padding: 2px 9px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); }
+.note { font-size: .95rem; color: var(--ink-2); margin-top: 1em; max-width: 44ch; }
+
+.bars { margin: 8px 0 18px; font-size: .875rem; }
+.bars-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--ink-2); margin-bottom: 10px; }
+.sw { display: inline-block; width: .7em; height: .7em; border-radius: 2px; margin-right: .45em; vertical-align: -.02em; }
+.sw.then { background: var(--rule); }
+.sw.now { background: var(--ink); }
+.metric { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 10px; align-items: center; margin-bottom: 8px; }
+.m-name { color: var(--ink-2); }
+.m-bars { display: grid; gap: 4px; }
+.b { width: var(--w); height: 22px; border-radius: 3px; background: var(--rule); display: flex; align-items: center; justify-content: flex-end; padding: 0 7px; font-variant-numeric: tabular-nums; white-space: nowrap; min-width: 3.2rem; }
+.b.now { background: var(--ink); color: var(--canvas); }
+
+.threads { list-style: none; margin: 0 0 1.2em; padding: 0; }
+.threads li { border-top: 1px solid var(--rule-soft); padding: 10px 0; font-size: 1rem; }
+.verdict { font-family: var(--display); font-weight: 560; font-size: clamp(1.35rem, 2vw, 1.7rem); line-height: 1.22; letter-spacing: -.012em; margin: .6em 0 0; max-width: 26ch; font-variation-settings: "opsz" 36; }
+.verdict-lead { color: var(--human); font-weight: 600; margin: 0 0 .4em; font-size: 1rem; }
+
+/* SVG */
+.shape { fill: var(--shape-fill); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }
+.ghost { fill: none; stroke: var(--ghost); stroke-width: 1.3; stroke-dasharray: 5 6; }
+.ov { opacity: 0; transition: opacity .28s ease; }
+.ov.on { opacity: 1; transition: opacity .5s ease .55s; }
+.lbl { font-family: var(--text); font-size: 17px; font-weight: 520; fill: var(--ink); text-anchor: middle; }
+.lbl-s { font-family: var(--text); font-size: 13.5px; fill: var(--ink-2); text-anchor: middle; }
+.lbl-cond { font-size: 14.5px; font-variation-settings: "wdth" 75; }
+.lbl-big { font-family: var(--display); font-size: 30px; font-weight: 600; fill: var(--ink-2); text-anchor: middle; }
+.start { text-anchor: start; }
+.end { text-anchor: end; }
+.f-human { fill: var(--human); }
+.f-agent { fill: var(--agent); }
+.f-infra { fill: var(--infra); }
+.f-ink2 { fill: var(--ink-2); }
+.f-rule { fill: var(--rule); }
+.t-human { fill: var(--human); }
+.t-agent { fill: var(--agent); }
+.s-human { stroke: var(--human); }
+.arc { fill: none; stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 5; }
+.tint-human { fill: var(--human); opacity: .16; }
+
+/* Mobile layout for the diagram */
+@media (max-width: 900px) {
+  .scrolly { display: block; }
+  .fig {
+    height: auto; z-index: 5;
+    top: calc(env(safe-area-inset-top, 0px) + var(--header-h));
+    background: var(--canvas);
+    padding: 10px 0 10px;
+    border-bottom: 1px solid var(--rule-soft);
+    margin: 0 calc(-1 * clamp(20px, 4vw, 48px));
+    padding-left: clamp(20px, 4vw, 48px); padding-right: clamp(20px, 4vw, 48px);
+  }
+  .fig-sub { display: none; }
+  .fig-title { font-size: 1.35rem; margin-bottom: 4px; }
+  .fig svg { max-height: 34vh; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-top: 6px; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .step { min-height: 0; padding: 44px 0; }
+  .steps { padding-bottom: 40vh; }
+}
+@media (max-width: 600px) {
+  .lbl { font-size: 27px; }
+  .lbl-big { font-size: 42px; }
+  .shape { stroke-width: 4; }
+  .ghost { stroke-width: 2.4; stroke-dasharray: 9 10; }
+  .arc { stroke-width: 3; }
+  .m-hide { display: none; }
+}
+
+/* Shared section frame */
+.section { border-top: 1px solid var(--rule-soft); padding: clamp(64px, 9vw, 120px) 0; }
+.section-intro { max-width: 46rem; margin-bottom: clamp(28px, 4.5vw, 56px); }
+.section-intro h2 { font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 4.6vw, 3.6rem); letter-spacing: -.024em; line-height: 1; margin: 0 0 .45em; font-variation-settings: "opsz" 72, "wdth" 92; }
+.section-intro p { margin: 0; font-size: 1.2rem; max-width: 44ch; color: var(--ink-2); }
+.src { color: var(--ink-2); }
+
+/* Eight shifts */
+.shifts { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(32px, 5vw, 88px); align-items: start; }
+.shift-index { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--header-h) + 28px); }
+.shift-group { margin: 0 0 22px; }
+.shift-group-name { font-size: .875rem; color: var(--ink-2); margin: 0 0 4px; padding-left: 16px; }
+.shift-group ul { list-style: none; margin: 0; padding: 0; }
+.shift-btn {
+  display: flex; align-items: baseline; gap: .6em; width: 100%; text-align: left;
+  font: inherit; font-size: 1.05rem; line-height: 1.3; color: var(--ink-2);
+  background: transparent; border: 0; border-left: 2px solid var(--rule-soft);
+  padding: 8px 0 8px 14px; cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.shift-btn:hover { color: var(--ink); }
+.shift-btn[aria-current="true"] { color: var(--ink); border-left-color: var(--ink); font-weight: 560; }
+.shift-btn .mark { flex: none; }
+.shift-panel:focus { outline: none; }
+.shift-panel.enter { animation: panelIn .35s ease; }
+@keyframes panelIn { from { opacity: 0; } to { opacity: 1; } }
+.shift-panel h3 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.03; letter-spacing: -.022em; margin: 0 0 .35em; max-width: 18ch; font-variation-settings: "opsz" 64, "wdth" 94; }
+.sp-where { font-size: .9rem; color: var(--ink-2); margin: 0 0 1.3em; }
+.sp-lead { font-size: 1.25rem; line-height: 1.48; max-width: 44ch; margin: 0 0 1.1em; }
+.shift-panel > p { max-width: 62ch; }
+.sub-head { font-weight: 600; margin: 1.6em 0 .4em; }
+.figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px 28px; margin: 1.6em 0 1.8em; }
+.figs div { border-top: 1px solid var(--rule-soft); padding-top: 12px; }
+.figs dt { font-family: var(--display); font-weight: 650; font-size: 2.1rem; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 48; }
+.figs dd { margin: .45em 0 0; font-size: .95rem; color: var(--ink-2); }
+.implication { margin-top: 2.2em; border-left: 3px solid var(--human); padding: 4px 0 4px 18px; }
+.imp-head { margin: 0 0 .3em; font-weight: 600; color: var(--human); font-size: .95rem; }
+.implication p:last-child { margin: 0; max-width: 58ch; }
+.timeline { list-style: none; margin: 1.6em 0; padding: 0; border-left: 1px solid var(--rule); }
+.timeline li { position: relative; padding: 0 0 22px 24px; max-width: 62ch; }
+.timeline li:last-child { padding-bottom: 4px; }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: .42em; width: 11px; height: 11px; border-radius: 50%; background: var(--canvas); border: 2px solid var(--agent); }
+.tl-date { display: block; font-size: .875rem; color: var(--ink-2); }
+.tl-what { display: block; font-weight: 600; margin: .1em 0 .2em; }
+.timeline p { margin: 0; font-size: 1rem; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .84em; }
+.chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: .5em 0 1.2em; padding: 0; list-style: none; }
+.chips li { border: 1px solid var(--rule); border-radius: 4px; padding: 3px 9px; background: var(--surface); font-size: .95rem; }
+.chips.round li { border-radius: 999px; padding: 4px 13px; }
+.chips .sep { border: 0; background: none; padding: 0; color: var(--ink-2); }
+.split3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; margin: 1.4em 0 1.6em; }
+.split3 > div { border-top: 2px solid var(--ink); padding-top: 10px; }
+.split3 h4 { margin: 0 0 .3em; font-size: 1rem; font-weight: 600; }
+.split3 p { margin: 0; font-size: .95rem; color: var(--ink-2); }
+.orch { margin: 1em 0 1.4em; padding-left: 1.4em; }
+.orch li { padding: 3px 0 3px .3em; }
+.metric.wide { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); }
+.hub { margin: 1.4em 0 1.6em; max-width: 620px; }
+.hub svg { display: block; width: 100%; height: auto; }
+.hub-line { stroke: var(--infra); stroke-width: 2; }
+.hub-node rect { fill: var(--canvas); stroke: var(--rule); stroke-width: 1.5; }
+.hub-node.agent rect { stroke: var(--agent); stroke-width: 2.5; }
+.hub-core rect { fill: var(--infra); }
+.hub-lbl { font-family: var(--text); font-size: 16px; font-weight: 520; fill: var(--ink); text-anchor: middle; }
+.hub-core text { font-family: var(--display); font-size: 22px; font-weight: 700; fill: var(--canvas); text-anchor: middle; }
+.where-marks .mark + .mark { margin-left: -.3em; }
+
+/* Phase matrix */
+.model-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 80px); align-items: start; }
+.model-pick { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--header-h) + 28px); }
+.phase-svg { display: block; width: 100%; max-width: 720px; height: auto; }
+.ph { fill: var(--shape-fill); stroke: var(--ink); stroke-width: 1.5; stroke-linejoin: round; cursor: pointer; transition: fill .25s ease; }
+.ph:hover { fill: var(--rule-soft); }
+.ph.on { fill: var(--ink); }
+.ph-txt { font-family: var(--text); font-size: 19px; font-weight: 520; fill: var(--ink-2); text-anchor: middle; pointer-events: none; transition: fill .25s ease; }
+.ph-txt.on { fill: var(--canvas); }
+.phase-tabs { margin: 14px 0 0; }
+@media (max-width: 900px) { .phase-tabs { margin-bottom: 32px; } }
+.phase-head h3 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1; letter-spacing: -.022em; margin: 0 0 .3em; font-variation-settings: "opsz" 64, "wdth" 94; }
+.phase-head p { margin: 0 0 1.6em; color: var(--ink-2); max-width: 52ch; }
+.phase-body.enter { animation: panelIn .35s ease; }
+.roles3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); }
+.role-col { border-top: 3px solid var(--rule); padding-top: 12px; }
+.role-col.human { border-top-color: var(--human); }
+.role-col.agent { border-top-color: var(--agent); }
+.role-col.infra { border-top-color: var(--infra); }
+.role-col h4 { font-size: .95rem; font-weight: 600; margin: 0 0 .5em; }
+.role-col.human h4 { color: var(--human); }
+.role-col.agent h4 { color: var(--agent); }
+.role-col.infra h4 { color: var(--infra); }
+.role-col ul { list-style: none; margin: 0; padding: 0; }
+.role-col li { padding: 8px 0; border-bottom: 1px solid var(--rule-soft); font-size: 1.05rem; }
+.model-note { color: var(--ink-2); font-size: .95rem; max-width: 62ch; margin: 2em 0 0; }
+.full-table { margin-top: 2.4em; }
+.full-table summary { cursor: pointer; font-size: .95rem; color: var(--ink); width: fit-content; }
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+.table-wrap table { border-collapse: collapse; min-width: 760px; width: 100%; font-size: .95rem; }
+.table-wrap th, .table-wrap td { text-align: left; vertical-align: top; padding: 11px 16px 11px 0; border-top: 1px solid var(--rule-soft); }
+.table-wrap thead th { font-weight: 600; border-top: 0; color: var(--ink-2); }
+.table-wrap tbody th { font-weight: 600; }
+
+@media (max-width: 900px) {
+  .shifts { grid-template-columns: minmax(0, 1fr); }
+  .shift-index { position: static; }
+}
+@media (max-width: 900px) { .model-grid { grid-template-columns: minmax(0, 1fr); } .model-pick { position: static; } }
+@media (max-width: 1100px) and (min-width: 901px) { .roles3 { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .roles3, .split3 { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .hub-lbl { font-size: 23px; }
+  .hub-core text { font-size: 30px; }
+  .ph-txt { font-size: 24px; }
+  .metric.wide { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .shift-panel.enter, .phase-body.enter { animation: none; }
+}
+
+/* Checklist */
+.cl { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); grid-template-areas: "overall main" "index main" "actions main"; grid-template-rows: auto auto 1fr; column-gap: clamp(32px, 5vw, 88px); align-items: start; }
+.cl-overall { grid-area: overall; }
+.cl-index { grid-area: index; list-style: none; margin: 0; padding: 0; }
+.cl-actions { grid-area: actions; margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.cl-main { grid-area: main; }
+.cl-count { font-family: var(--display); font-weight: 650; font-size: 1.6rem; letter-spacing: -.012em; margin: 0 0 10px; font-variant-numeric: tabular-nums; font-variation-settings: "opsz" 32; }
+.cl-bar { height: 6px; border-radius: 3px; background: var(--rule-soft); overflow: hidden; }
+.cl-bar span { display: block; height: 100%; width: 0; background: var(--ink); border-radius: 3px; transition: width .45s cubic-bezier(.2, .7, .2, 1); }
+.cl-status { font-size: .875rem; color: var(--ink-2); margin: 10px 0 26px; max-width: 34ch; }
+.ci-btn {
+  display: grid; grid-template-columns: 1.5rem minmax(0, 1fr) auto; align-items: baseline; gap: 6px 8px;
+  width: 100%; text-align: left; font: inherit; font-size: 1rem; line-height: 1.3; color: var(--ink-2);
+  background: transparent; border: 0; border-left: 2px solid var(--rule-soft); padding: 8px 0 8px 12px; cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.ci-btn:hover { color: var(--ink); }
+.ci-btn[aria-current="true"] { color: var(--ink); border-left-color: var(--ink); font-weight: 560; }
+.ci-num, .ci-count { font-variant-numeric: tabular-nums; }
+.ci-count { font-size: .85rem; font-weight: 400; color: var(--ink-2); }
+.ci-count.done { color: var(--ink); font-weight: 600; }
+.ci-bar { grid-column: 2 / 4; height: 2px; background: var(--rule-soft); border-radius: 1px; overflow: hidden; }
+.ci-bar span { display: block; height: 100%; width: 0; background: var(--ink); transition: width .45s cubic-bezier(.2, .7, .2, 1); }
+.pill-btn { font: inherit; font-size: .9rem; color: var(--canvas); background: var(--ink); border: 1px solid var(--ink); border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+.pill-btn:hover { opacity: .9; }
+.text-btn { font: inherit; font-size: .9rem; color: var(--ink-2); background: none; border: 0; padding: 7px 2px; cursor: pointer; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+.text-btn:hover { color: var(--ink); text-decoration-color: currentColor; }
+.text-btn.confirm { color: var(--human); text-decoration-color: currentColor; }
+.cl-msg { flex-basis: 100%; font-size: .875rem; color: var(--ink-2); margin: 0; min-height: 1.3em; }
+.cl-main.enter { animation: panelIn .35s ease; }
+.cl-main h3 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.03; letter-spacing: -.022em; margin: 0 0 .35em; max-width: 20ch; font-variation-settings: "opsz" 64, "wdth" 94; }
+.cl-main h3:focus { outline: none; }
+.cl-where { font-size: .9rem; color: var(--ink-2); margin: 0 0 1.2em; }
+.cl-items { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule-soft); }
+.cl-items li { border-top: 1px solid var(--rule-soft); padding: 13px 0; }
+.cl-item { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: start; cursor: pointer; }
+.cl-item input {
+  -webkit-appearance: none; appearance: none; width: 20px; height: 20px; margin: .16em 0 0;
+  border: 1.5px solid var(--ink-2); border-radius: 5px; background: var(--canvas);
+  display: grid; place-content: center; cursor: pointer; transition: background-color .2s, border-color .2s;
+}
+.cl-item input::after {
+  content: ""; width: 10px; height: 5px; margin-top: -3px;
+  border-left: 2px solid var(--canvas); border-bottom: 2px solid var(--canvas);
+  transform: rotate(-45deg) scale(0); transition: transform .22s cubic-bezier(.2, .7, .3, 1.5);
+}
+.cl-item input:checked { background: var(--ink); border-color: var(--ink); }
+.cl-item input:checked::after { transform: rotate(-45deg) scale(1); }
+.cl-item input:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.cl-text { max-width: 62ch; transition: color .2s; }
+.cl-item input:checked + .cl-text { color: var(--ink-2); }
+.cl-src { display: inline-block; margin: 4px 0 0 32px; font-size: .85rem; }
+.cl-question { margin-top: 2.2em; border-left: 3px solid var(--human); padding: 4px 0 4px 18px; }
+.cl-q { font-family: var(--display); font-weight: 560; font-size: clamp(1.3rem, 2vw, 1.65rem); line-height: 1.24; letter-spacing: -.01em; margin: 0; max-width: 30ch; font-variation-settings: "opsz" 36; }
+.cl-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 2.4em; flex-wrap: wrap; }
+.cl-nav button { font: inherit; font-size: .95rem; color: var(--ink); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 16px; cursor: pointer; text-align: left; max-width: 100%; }
+.cl-nav button:hover { border-color: var(--ink); }
+.cl-nav .next { margin-left: auto; }
+@media (max-width: 900px) {
+  .cl { grid-template-columns: minmax(0, 1fr); grid-template-areas: "overall" "index" "main" "actions"; grid-template-rows: auto; }
+  .cl-status { margin-bottom: 18px; }
+  .cl-index { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; margin-bottom: 28px; }
+  .cl-index::-webkit-scrollbar { display: none; }
+  .ci-btn { grid-template-columns: auto auto; gap: 6px; border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px; white-space: nowrap; font-size: .9rem; }
+  .ci-btn[aria-current="true"] { background: var(--ink); color: var(--canvas); border-color: var(--ink); }
+  .ci-btn[aria-current="true"] .ci-count { color: var(--canvas); }
+  .ci-name, .ci-bar { display: none; }
+  .cl-actions { margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cl-main.enter { animation: none; }
+  .cl-bar span, .ci-bar span, .cl-item input::after { transition: none; }
+}
+
+/* Roles and risks */
+.roles-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(32px, 5vw, 88px); align-items: start; margin-bottom: clamp(56px, 8vw, 104px); }
+.sub-title { font-family: var(--display); font-weight: 650; font-size: 1.5rem; letter-spacing: -.012em; line-height: 1.15; margin: 0 0 .5em; font-variation-settings: "opsz" 32; }
+.slope { display: block; width: 100%; height: auto; max-width: 680px; margin: 8px 0 6px; }
+.slope g.series { transition: opacity .25s ease; }
+.slope:hover g.series { opacity: .25; }
+.slope g.series:hover { opacity: 1; }
+.sl-line { fill: none; stroke-width: 3; stroke-linecap: round; }
+.sl-peer .sl-line { stroke: var(--ink); } .sl-peer circle { fill: var(--ink); }
+.sl-lead .sl-line { stroke: var(--ink-2); stroke-dasharray: 6 6; } .sl-lead circle { fill: var(--ink-2); }
+.sl-collab .sl-line { stroke: var(--human); } .sl-collab circle { fill: var(--human); }
+.sl-axis { stroke: var(--rule); stroke-width: 1; }
+.sl-head { font-family: var(--text); font-size: 14px; fill: var(--ink-2); text-anchor: middle; }
+.sl-val { font-family: var(--display); font-size: 17px; font-weight: 650; fill: var(--ink); }
+.sl-name { font-family: var(--text); font-size: 15px; fill: var(--ink-2); }
+.slope-legend { display: none; list-style: none; margin: 10px 0 0; padding: 0; font-size: .9rem; color: var(--ink-2); }
+.slope-legend li { display: flex; align-items: center; gap: 10px; padding: 3px 0; }
+.sw-line { display: inline-block; flex: none; width: 22px; height: 0; border-top: 3px solid var(--ink); }
+.sw-line.lead { border-top: 3px dashed var(--ink-2); }
+.sw-line.collab { border-top-color: var(--human); }
+.caption { font-size: .9rem; color: var(--ink-2); margin: .5em 0 0; max-width: 60ch; }
+.role-facts { list-style: none; margin: 1.4em 0 0; padding: 0; }
+.role-facts li { border-top: 1px solid var(--rule-soft); padding: 12px 0; font-size: 1rem; }
+.role-facts strong { display: block; font-weight: 600; margin-bottom: .15em; }
+.tensions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 5vw, 72px); }
+.tensions li { border-top: 1px solid var(--rule-soft); padding: 22px 0 26px; }
+.tensions h4 { font-family: var(--display); font-weight: 650; font-size: 1.3rem; letter-spacing: -.01em; margin: 0 0 .5em; font-variation-settings: "opsz" 28; }
+.t-fig { display: flex; align-items: baseline; gap: 12px; margin: 0 0 .5em; }
+.t-num { font-family: var(--display); font-weight: 650; font-size: 2.1rem; line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; flex: none; font-variation-settings: "opsz" 48; }
+.tensions p { margin: 0 0 .6em; font-size: 1rem; max-width: 52ch; }
+.t-jump { text-align: left; padding-left: 0; }
+@media (max-width: 900px) { .roles-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 700px) { .tensions { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .sl-head { font-size: 26px; } .sl-val { font-size: 30px; } .slope-legend { display: block; } }
+
+/* Implications */
+.impl-group { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 20px clamp(24px, 4vw, 64px); padding: 30px 0 34px; border-top: 1px solid var(--rule-soft); }
+.impl-label { margin: 0; font-weight: 600; font-size: 1rem; line-height: 1.35; max-width: 18ch; }
+.impl-items { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(28px, 4vw, 56px); }
+.impl-items h3 { font-family: var(--display); font-weight: 650; font-size: 1.45rem; line-height: 1.15; letter-spacing: -.012em; margin: 0 0 .45em; font-variation-settings: "opsz" 32; }
+.impl-items p { margin: 0 0 .7em; font-size: 1rem; max-width: 50ch; }
+.impl-links { display: flex; flex-wrap: wrap; gap: 0 18px; }
+.impl-links .text-btn { padding-left: 0; text-align: left; }
+@media (max-width: 900px) { .impl-group { grid-template-columns: minmax(0, 1fr); } .impl-label { max-width: none; } }
+@media (max-width: 700px) { .impl-items { grid-template-columns: minmax(0, 1fr); } }
+
+/* Evidence lens */
+.ev-badge { display: none; }
+.lens-on .ev-mark, .ev-sample { display: inline-block; border-radius: 999px; font-size: .74rem; line-height: 1.4; font-weight: 560; padding: 2px 9px; white-space: nowrap; border: 1px solid transparent; color: var(--ink); background: transparent; }
+.lens-on .ev-badge { margin: 0 0 0 .55em; vertical-align: .08em; }
+.lens-on .figs .ev-badge, .lens-on .bars .ev-badge, .lens-on .timeline .ev-badge, .lens-on .examples > li > .ev-badge { margin: 8px 0 0; }
+.lens-on .tensions .ev-badge { margin: 0 14px 6px 0; }
+.lens-on .impl-items .ev-badge { display: table; margin: 0 0 8px; }
+.lens-on .dim .ev-badge { display: block; width: fit-content; margin: 5px 0 0; }
+.lens-on .ev-mark.evs-study, .ev-sample.evs-study { background: var(--ink); border-color: var(--ink); color: var(--canvas); }
+.lens-on .ev-mark.evs-survey, .ev-sample.evs-survey { background: var(--ink-2); border-color: var(--ink-2); color: var(--canvas); }
+.lens-on .ev-mark.evs-vendor, .ev-sample.evs-vendor { border: 1.5px solid var(--ink); }
+.lens-on .ev-mark.evs-expert, .ev-sample.evs-expert { border: 1.5px dashed var(--ink-2); }
+.lens-on .ev-mark.evs-secondhand, .ev-sample.evs-secondhand { border: 1.5px dotted var(--ink-2); }
+.lens-on .ev-mark.evs-synthesis, .ev-sample.evs-synthesis { background: var(--rule-soft); border-color: var(--rule-soft); color: var(--ink-2); }
+.lens-on [data-ev] { transition: opacity .3s ease; }
+.lens-on .ev-dim { opacity: .18; }
+.lens { position: fixed; z-index: 30; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.lens-btn { font: inherit; font-size: .9rem; font-weight: 560; color: var(--canvas); background: var(--ink); border: 0; border-radius: 999px; padding: 10px 18px 10px 14px; cursor: pointer; display: flex; align-items: center; gap: 9px; box-shadow: 0 6px 22px rgba(20, 24, 46, .22); }
+.lens-btn .dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--canvas); }
+.lens-on .lens-btn .dot { background: var(--canvas); }
+.lens-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.lens-panel { width: min(390px, calc(100vw - 32px)); max-height: calc(100vh - 140px); max-height: calc(100svh - 140px); overflow: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 18px 18px 14px; box-shadow: 0 18px 50px rgba(20, 24, 46, .2); }
+.lens-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.lens-top h2 { font-family: var(--display); font-weight: 650; font-size: 1.3rem; letter-spacing: -.01em; margin: 0; font-variation-settings: "opsz" 28; }
+.lens-x { font: inherit; font-size: 1.5rem; line-height: 1; color: var(--ink-2); background: none; border: 0; padding: 2px 6px; cursor: pointer; }
+.lens-x:hover { color: var(--ink); }
+.lens-intro { font-size: .9rem; color: var(--ink-2); margin: .55em 0 1em; }
+.lens-types { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule-soft); }
+.lens-type { display: grid; grid-template-columns: 7.4rem minmax(0, 1fr) auto; gap: 10px; align-items: center; width: 100%; text-align: left; font: inherit; font-size: .85rem; color: var(--ink); background: none; border: 0; border-top: 1px solid var(--rule-soft); padding: 9px 2px; cursor: pointer; transition: opacity .2s; }
+.lens-type .ev-sample { justify-self: start; }
+.lens-type[aria-pressed="false"] { opacity: .4; }
+.lt-desc { color: var(--ink-2); line-height: 1.3; }
+.lt-count { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.lens-quick { display: flex; flex-wrap: wrap; gap: 0 16px; margin: 8px 0 0; }
+.lens-quick .text-btn, .lens-off { padding-left: 0; }
+@media (prefers-reduced-motion: reduce) { .lens-on [data-ev] { transition: none; } }
+
+/* References */
+.refs { margin-top: 30px; border-top: 1px solid var(--rule-soft); padding-top: 20px; }
+.refs summary { cursor: pointer; width: fit-content; font-family: var(--display); font-weight: 650; font-size: 1.3rem; letter-spacing: -.01em; color: var(--ink); font-variation-settings: "opsz" 28; }
+.refs-count { font-family: var(--text); font-weight: 400; font-size: .9rem; letter-spacing: 0; color: var(--ink-2); margin-left: .5em; }
+.refs-intro { margin: 14px 0 4px; }
+.refs-group h3 { font-size: 1rem; font-weight: 600; color: var(--ink); margin: 28px 0 10px; }
+.refs-n { font-weight: 400; color: var(--ink-2); margin-left: .35em; }
+.refs-group ul { list-style: none; margin: 0; padding: 0; columns: 2 340px; column-gap: 48px; }
+.refs-group li { break-inside: avoid; padding: 5px 0; font-size: .9rem; line-height: 1.45; color: var(--ink-2); }
+.refs-group li a { color: var(--ink); }
+
+footer { border-top: 1px solid var(--rule-soft); padding: 40px 0 64px; color: var(--ink-2); font-size: .9rem; }
+footer p { max-width: 70ch; margin: 0 0 .6em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .v, .ov, .ov.on, .step, .fig-title, .tab { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#overview" data-jump="overview">UX workflow shifts (2026)<span class="brand-sub"> — A report</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a class="nav-link" href="#overview" data-jump="overview">Then and now</a>
+      <a class="nav-link" href="#shifts" data-jump="shifts">Shifts</a>
+      <a class="nav-link" href="#diamond" data-jump="diamond">Diamond debate</a>
+      <a class="nav-link" href="#model" data-jump="model">Model</a>
+      <a class="nav-link" href="#roles" data-jump="roles">Roles and risks</a>
+      <a class="nav-link" href="#checklist" data-jump="checklist">Checklist</a>
+      <button class="theme-btn" id="theme" type="button">Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="overview">
+    <div class="wrap">
+      <h1>The work moved upstream and into infrastructure.</h1>
+      <div class="framing">
+        <div class="framing-inner">
+          <p>Since January 2025, when I was laid off from a climate-tech startup, I’ve spent more than 20 months watching and engaging with the shifts reshaping UX and the wider tech industry. I haven’t only observed the AI revolution. I’ve worked inside it, creating designs, plans and strategies for small AI startups pushing toward agentic workflows.</p>
+          <p>My own workflow has changed too. AI is now my sparring partner: it checks my blind spots, generates first drafts of interactive prototypes, and lets me engage users and clients through live prototypes. But I still make maps, models and diagrams when I need to think through higher-order concepts or see something whole.</p>
+          <p>All the while, “AI and UX” reports kept appearing in my LinkedIn feed. I skimmed and parsed them one at a time, but I wanted to see what happens when they converge: which dots connect, and which patterns emerge in one giant, meta-level report. This is the result, and I wanted to share it with you. It’s built on an AI-generated analysis of those AI and UX reports, so there are many levels of meta going on here. I hope you find value in it. One pattern stood out to me most: as making gets cheap, the contested work is framing the problem, which is exactly what those maps and models are for.</p>
+          <p class="byline"><strong>Uday Gajendar</strong><a href="https://www.udanium.com">udanium.com</a><a href="https://www.linkedin.com/in/udanium">LinkedIn</a></p>
+        </div>
+      </div>
+      <div class="hero-grid">
+        <div class="standfirst">
+          <p class="lead">In 2026, AI in UX stopped being a set of add-ons and became part of how design work is organized.</p>
+          <p>Agents now work on the canvas and in code. The Model Context Protocol carries context between design files, design systems, research and code. Skills turn a team’s conventions into instructions agents follow.</p>
+          <p>When producing UI costs little, the value moves to framing problems, building context and judging what comes back.</p>
+          <p class="meta">Note: This started from a personal wish to understand where UX and AI stand today. I cross-connected multiple reports using Perplexity Computer, and I’m sharing the result with my network. Prepared October 22, 2026.</p>
+        </div>
+
+        <div class="compare">
+          <div class="compare-head">
+            <h2 class="compare-title" id="compare-title">Then and now</h2>
+            <p class="compare-hint">Drag the slider to move each part of the workflow into 2026.</p>
+          </div>
+          <ul class="rows" aria-labelledby="compare-title">
+            <li class="row"><span class="dim">Weekly AI use for design</span><span class="val"><span class="v before"><i class="mark"></i>54% of designers, in 2025</span><span class="v after"><i class="mark agent"></i>91% of designers</span></span></li>
+            <li class="row"><span class="dim">Primary artifact</span><span class="val"><span class="v before"><i class="mark"></i>Static mockups and specs</span><span class="v after"><i class="mark agent"></i>Working, code-backed prototypes</span></span></li>
+            <li class="row"><span class="dim">Starting point</span><span class="val"><span class="v before"><i class="mark"></i>A brief, then wireframes</span><span class="v after"><i class="mark agent"></i>36% of projects start from a working prototype</span></span></li>
+            <li class="row"><span class="dim">Design to development</span><span class="val"><span class="v before"><i class="mark"></i>A one-way handoff</span><span class="v after"><i class="mark infra"></i>A two-way loop between code and canvas</span></span></li>
+            <li class="row"><span class="dim">Design system</span><span class="val"><span class="v before"><i class="mark"></i>Documentation for people</span><span class="v after"><i class="mark infra"></i>Machine-readable rules that agents follow</span></span></li>
+            <li class="row"><span class="dim">Team conventions</span><span class="val"><span class="v before"><i class="mark"></i>Tribal knowledge and critique comments</span><span class="v after"><i class="mark infra"></i>Encoded as skills agents load when relevant</span></span></li>
+            <li class="row"><span class="dim">Research synthesis</span><span class="val"><span class="v before"><i class="mark"></i>Manual affinity mapping</span><span class="v after"><i class="mark agent"></i>AI-moderated interviews and cited synthesis</span></span></li>
+            <li class="row"><span class="dim">Designer’s role</span><span class="val"><span class="v before"><i class="mark"></i>Maker of screens</span><span class="v after"><i class="mark human"></i>Director and curator of agent output</span></span></li>
+            <li class="row"><span class="dim">Toolstack</span><span class="val"><span class="v before"><i class="mark"></i>About 3 AI tools</span><span class="v after"><i class="mark infra"></i>About 7, plus tools the team builds</span></span></li>
+          </ul>
+          <div class="scrub">
+            <span aria-hidden="true">Before</span>
+            <input type="range" id="scrub" min="0" max="9" step="1" value="0" aria-label="Compare the workflow before and in 2026">
+            <span aria-hidden="true">2026</span>
+          </div>
+          <ul class="legend">
+            <li class="lead-in">Where the 2026 version mostly lives:</li>
+            <li><i class="mark human"></i>Human judgment</li>
+            <li><i class="mark agent"></i>Agent work</li>
+            <li><i class="mark infra"></i>Shared infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="shifts" aria-labelledby="shifts-title">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2 id="shifts-title">Eight shifts</h2>
+        <p>Grouped by where the change happens: in what gets made, in the tooling, and in the practice. Color shows where each shift moves the work.</p>
+      </div>
+
+      <div class="shifts">
+        <nav class="shift-index" aria-label="Shifts">
+          <div class="shift-group">
+            <p class="shift-group-name">What gets made</p>
+            <ul>
+              <li><button class="shift-btn" type="button" aria-controls="shift-prototypes" aria-current="true"><i class="mark agent"></i>Prototypes replace mockups</button></li>
+              <li><button class="shift-btn" type="button" aria-controls="shift-object"><i class="mark human"></i>What designers design</button></li>
+            </ul>
+          </div>
+          <div class="shift-group">
+            <p class="shift-group-name">The tooling layer</p>
+            <ul>
+              <li><button class="shift-btn" type="button" aria-controls="shift-canvas"><i class="mark agent"></i>Agents on the canvas</button></li>
+              <li><button class="shift-btn" type="button" aria-controls="shift-mcp"><i class="mark infra"></i>MCP as the connective layer</button></li>
+              <li><button class="shift-btn" type="button" aria-controls="shift-skills"><i class="mark infra"></i>Skills encode judgment</button></li>
+              <li><button class="shift-btn" type="button" aria-controls="shift-systems"><i class="mark infra"></i>Systems as agent infrastructure</button></li>
+            </ul>
+          </div>
+          <div class="shift-group">
+            <p class="shift-group-name">The practice</p>
+            <ul>
+              <li><button class="shift-btn" type="button" aria-controls="shift-research"><i class="mark agent"></i>Research splits three ways</button></li>
+              <li><button class="shift-btn" type="button" aria-controls="shift-orchestration"><i class="mark human"></i>Designers as orchestrators</button></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="shift-panels">
+
+          <article class="shift-panel" id="shift-prototypes" tabindex="-1" aria-labelledby="sp1">
+            <h3 id="sp1">Prototypes replace mockups</h3>
+            <p class="sp-where"><i class="mark agent"></i>Moves production toward agents</p>
+            <p class="sp-lead">Working, code-backed prototypes became the center of the workflow, and the people making them are no longer only specialists.</p>
+            <dl class="figs">
+              <div><dt>57.3%</dt><dd>of designers use AI for prototyping and wireframing, up from about 20% a year earlier. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></dd></div>
+              <div><dt>71.4%</dt><dd>use Figma Make, which didn’t appear in the previous year’s report. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></dd></div>
+              <div><dt>43%</dt><dd>of companies now expect working prototypes. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></dd></div>
+              <div><dt>20%</dt><dd>of respondents call themselves design engineers. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></dd></div>
+            </dl>
+            <p>The tools caught up during the year. Figma’s Code Layers brought Make’s code-backed prototyping onto the design canvas, and Make gained the ability to work directly in a production codebase. It can now scaffold a backend with a CMS, database and authentication, which turns prototypes into production apps. <a class="src" href="https://www.figma.com/release-notes/">Figma release notes</a></p>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>Validation can start earlier and at higher fidelity. The risk is committing to a solution before the problem is framed, which makes deliberate divergence and problem framing more important, not less.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-object" tabindex="-1" aria-labelledby="sp8" hidden>
+            <h3 id="sp8">The object of design changes too</h3>
+            <p class="sp-where"><i class="mark human"></i>Changes what designers are responsible for</p>
+            <p class="sp-lead">Agentic products need new interaction patterns, and some of a product’s users are now agents themselves.</p>
+            <p class="sub-head">Patterns agentic products now need</p>
+            <ul class="chips round">
+              <li>Intent previews</li><li>Autonomy controls</li><li>Live progress feeds</li><li>Approval gates</li><li>Audit and undo</li>
+            </ul>
+            <p>Teams also increasingly design for AI agents as users: agents that browse, compare and act on a product on a person’s behalf. <a class="src" href="https://www.aufaitux.com/blog/ui-ux-trends/">AufaitUX</a></p>
+            <p>One practitioner argues the deliverable becomes “a behavior specification” rather than a Figma file. <a class="src" href="https://shumin.design/blog/ai-agent-design-2026/">Shumin</a></p>
+          </article>
+
+          <article class="shift-panel" id="shift-canvas" tabindex="-1" aria-labelledby="sp2" hidden>
+            <h3 id="sp2">The canvas opens to agents</h3>
+            <p class="sp-where"><i class="mark agent"></i>Moves production toward agents</p>
+            <p class="sp-lead">In three months, outside agents got onto the Figma canvas, Anthropic launched a conversational design tool, and Figma shipped its own design agent.</p>
+            <ol class="timeline">
+              <li>
+                <span class="tl-date">March 2026</span>
+                <span class="tl-what">Outside agents on the canvas</span>
+                <p>Figma’s <code>use_figma</code> tool lets Claude Code, Codex and other MCP clients create and edit Figma assets tied to a team’s design system. A companion tool turns live HTML into editable layers, closing the loop from code to canvas and back. <a class="src" href="https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/">Figma</a></p>
+              </li>
+              <li>
+                <span class="tl-date">April 17, 2026</span>
+                <span class="tl-what">Claude Design launches</span>
+                <p>A conversational canvas for prototypes, wireframes and decks that applies a team’s design system automatically. More than a million people used it in its first week. It now checks output against imported design systems and hands off to Claude Code without falling back to a screenshot. <a class="src" href="https://www.anthropic.com/news/claude-design-anthropic-labs">Anthropic</a></p>
+              </li>
+              <li>
+                <span class="tl-date">May 2026</span>
+                <span class="tl-what">Figma’s own design agent</span>
+                <p>Works with a team’s components and tokens, explores several directions in parallel, handles bulk edits such as dark mode and component swaps, writes documentation, and turns comment threads into prioritized revisions. It’s now generally available. <a class="src" href="https://www.figma.com/blog/the-figma-agent-is-here/">Figma</a></p>
+              </li>
+            </ol>
+            <p>Other prompt-to-product agents include v0, Bolt, Lovable and Framer AI.</p>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>Repetitive production work, such as states, variants, content fills and documentation, moves to agents. Exploration gets wider and cheaper, so the designer’s job shifts toward choosing among options and refining the chosen one.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-mcp" tabindex="-1" aria-labelledby="sp3" hidden>
+            <h3 id="sp3">MCP becomes the connective layer</h3>
+            <p class="sp-where"><i class="mark infra"></i>Moves work into shared infrastructure</p>
+            <p class="sp-lead">The Model Context Protocol lets agents read from and write to design tools in a structured way, so context flows in both directions instead of being handed off once.</p>
+            <figure class="hub">
+              <svg viewBox="0 0 600 330" role="img" aria-label="MCP at the center, connected in both directions to coding agents, design files, design systems, research repositories and whiteboards.">
+                <defs>
+                  <marker id="harrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z" class="f-infra"/>
+                  </marker>
+                </defs>
+                <line class="hub-line" x1="300" y1="142" x2="300" y2="68" marker-start="url(#harrow)" marker-end="url(#harrow)"/>
+                <line class="hub-line" x1="360" y1="156.5" x2="408" y2="145.7" marker-start="url(#harrow)" marker-end="url(#harrow)"/>
+                <line class="hub-line" x1="335" y1="198.8" x2="406.4" y2="257.4" marker-start="url(#harrow)" marker-end="url(#harrow)"/>
+                <line class="hub-line" x1="265" y1="198.8" x2="193.6" y2="257.4" marker-start="url(#harrow)" marker-end="url(#harrow)"/>
+                <line class="hub-line" x1="240" y1="156.5" x2="192" y2="145.7" marker-start="url(#harrow)" marker-end="url(#harrow)"/>
+                <g class="hub-core"><rect x="245" y="145" width="110" height="50" rx="8"/><text x="300" y="178">MCP</text></g>
+                <g class="hub-node agent"><rect x="215" y="17" width="170" height="46" rx="8"/><text class="hub-lbl" x="300" y="46">Coding agents</text></g>
+                <g class="hub-node"><rect x="415" y="102" width="170" height="46" rx="8"/><text class="hub-lbl" x="500" y="131">Design files</text></g>
+                <g class="hub-node"><rect x="355" y="262" width="170" height="46" rx="8"/><text class="hub-lbl" x="440" y="291">Design system</text></g>
+                <g class="hub-node"><rect x="75" y="262" width="170" height="46" rx="8"/><text class="hub-lbl" x="160" y="291">Research</text></g>
+                <g class="hub-node"><rect x="15" y="102" width="170" height="46" rx="8"/><text class="hub-lbl" x="100" y="131">Whiteboards</text></g>
+              </svg>
+            </figure>
+            <p>The Figma MCP server passes frames, components, variables and layout data to coding agents such as Claude Code, Cursor and GitHub Copilot. Figma is explicit that it supplies design context, not finished production code. Code Connect maps Figma components to the components in a real codebase, so generated code uses them instead of guessing. The server now works with more than 20 partner clients. <a class="src" href="https://help.figma.com/hc/en-us/articles/39252411778583-Figma-MCP-server-FAQs">Figma</a></p>
+            <p class="sub-head">Agents connected to Storybook’s MCP server <span class="tag">Vendor benchmark</span></p>
+            <dl class="figs">
+              <div><dt>12.8%</dt><dd>better component usage</dd></div>
+              <div><dt>2.76×</dt><dd>faster</dd></div>
+              <div><dt>27%</dt><dd>fewer tokens <a class="src" href="https://storybook.js.org/blog/how-to-document-your-design-system-best-practices-tools/">Storybook</a></dd></div>
+            </dl>
+            <p>The reach goes well beyond Figma. Uber runs an internal MCP server for its Base design system, and Atlassian offers a server and a CLI for its own. Lyssna and Great Question let teams query research studies from Claude or ChatGPT, and coding agents can now read and write FigJam boards.</p>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>The handoff becomes a continuous loop rather than a single moment. Keeping design and code in sync becomes ongoing infrastructure work.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-skills" tabindex="-1" aria-labelledby="sp4" hidden>
+            <h3 id="sp4">Skills encode team judgment</h3>
+            <p class="sp-where"><i class="mark infra"></i>Moves judgment into shared infrastructure</p>
+            <p class="sp-lead">Skills are markdown instruction files that agents load when they’re relevant. They turn a team’s steps, sequencing and conventions into rules agents follow while they work.</p>
+            <p>Figma describes conventions as “no longer static documentation.” Skills also support self-correcting loops: the agent screenshots its own output and fixes whatever doesn’t match the design system. <a class="src" href="https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/">Figma</a></p>
+            <p class="sub-head">Figma’s launch set</p>
+            <ul class="chips">
+              <li><code>/figma-use</code></li><li><code>/figma-generate-design</code></li><li><code>/apply-design-system</code></li><li><code>/sync-figma-token</code></li><li><code>/create-voice</code></li>
+            </ul>
+            <p>The last writes screen-reader specs and was contributed by Uber’s Ian Guisard. Skills for earlier in the process are appearing too, such as <code>/interview-synthesis</code>, <code>/competitive-teardown</code> and heuristic critique. <a class="src" href="https://www.figma.com/resource-library/claude-skills-for-product-designers/">Figma</a></p>
+            <p class="sub-head">A sequence that encodes a process</p>
+            <ul class="chips" aria-label="Skill sequence">
+              <li><code>/grill-me</code></li><li class="sep" aria-hidden="true">→</li><li><code>/design-brief</code></li><li class="sep" aria-hidden="true">→</li><li><code>/information-architecture</code></li><li class="sep" aria-hidden="true">→</li><li><code>/design-tokens</code></li>
+            </ul>
+            <p class="src"><a href="https://github.com/julianoczkowski/designer-skills">julianoczkowski/designer-skills</a></p>
+            <dl class="figs">
+              <div><dt>63</dt><dd>design skills in one open-source set, spanning research, strategy, design ops and prototyping. <a class="src" href="https://marieclairedean.substack.com/p/i-built-63-design-skills-for-claude">Marie Claire Dean</a></dd></div>
+              <div><dt>1,219</dt><dd>design and frontend skills across 90 packs in one index. <a class="src" href="https://agentgid.com/skills/category/design/">AgentGID</a></dd></div>
+            </dl>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>Writing down tacit expertise becomes a core design practice. Whoever writes and maintains a skill shapes the output of every agent that uses it, which raises new questions about who owns skills and how they’re reviewed.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-systems" tabindex="-1" aria-labelledby="sp5" hidden>
+            <h3 id="sp5">Design systems become agent infrastructure</h3>
+            <p class="sp-where"><i class="mark infra"></i>Moves work into shared infrastructure</p>
+            <p class="sp-lead">The design system’s audience now includes machines. What agents can reach decides whether they produce on-brand work or generic work.</p>
+            <p>An agent-ready system has machine-readable tokens, documented component APIs, parity between Figma and code, and usage rules written as checks rather than review comments. Teams feed it to agents in one of three ways. <a class="src" href="https://www.headway.io/blog/design-systems-for-ai-agents">Headway</a></p>
+            <div class="split3">
+              <div><h4>Live MCP server</h4><p>Agents query the system while they work.</p></div>
+              <div><h4>Static agents file</h4><p>A file of rules and context the agent reads.</p></div>
+              <div><h4>Task-based routing</h4><p>Each task is sent to the context files it needs.</p></div>
+            </div>
+            <p>zeroheight’s 2026 outlook names three priorities: MCP servers with skills and guidelines, designing in code, and documenting the when and why behind components. <a class="src" href="https://state-of-ai-in-design-systems.netlify.app/reading">State of AI in Design Systems</a></p>
+            <p class="sub-head">Demand is ahead of practice</p>
+            <div class="bars" role="img" aria-label="57% are excited about AI documentation generation, but only 12% use AI to deliver documentation to the tools that need it.">
+              <div class="metric wide"><span class="m-name">Excited about AI-generated docs</span><div class="m-bars"><div class="b" style="--w:57%">57%</div></div></div>
+              <div class="metric wide"><span class="m-name">Using AI to deliver docs to tools</span><div class="m-bars"><div class="b now" style="--w:12%">12%</div></div></div>
+            </div>
+            <p class="src">Storybook’s 2026 Design Systems Report. <a href="https://storybook.js.org/blog/how-to-document-your-design-system-best-practices-tools/">Storybook</a></p>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>Design system teams take on a platform-engineering role. Recording why a component exists, not just what it is, decides whether agents generate on-brand work or generic work.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-research" tabindex="-1" aria-labelledby="sp6" hidden>
+            <h3 id="sp6">Research workflows split three ways</h3>
+            <p class="sp-where"><i class="mark agent"></i>Moves fieldwork toward agents, while <i class="mark human"></i>judgment stays with researchers</p>
+            <p class="sp-lead">AI research tools now fall into three groups: tools that run research, tools that capture it, and tools that synthesize it. <a class="src" href="https://getperspective.ai/blog/best-ai-ux-research-tools-2026-ranked-by-stage">Perspective AI</a></p>
+            <div class="split3">
+              <div><h4>Run</h4><p>AI-moderated interviews, from tools such as Marvin and Dovetail’s agents.</p></div>
+              <div><h4>Capture</h4><p>Testing platforms that record sessions and responses.</p></div>
+              <div><h4>Synthesize</h4><p>Auto-coding and synthesis that cites its sources.</p></div>
+            </div>
+            <p>Synthetic participants have appeared too, from tools such as Synthetic Users and Uxia, alongside Dovetail’s digital twins. In a side-by-side test, synthetic users caught surface-level problems but missed how real users actually behave. They worked best as a fast, automated heuristic review. <a class="src" href="https://thegood.com/insights/ai-research-tools/">The Good</a></p>
+            <dl class="figs">
+              <div><dt>35.7%</dt><dd>of designers never use AI for research synthesis, one of the least-adopted uses. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></dd></div>
+            </dl>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>Research can run faster and continuously, but deciding what counts as evidence becomes a methodological and ethical question. Researchers spend more of their time framing studies, verifying findings and interpreting them.</p>
+            </div>
+          </article>
+
+          <article class="shift-panel" id="shift-orchestration" tabindex="-1" aria-labelledby="sp7" hidden>
+            <h3 id="sp7">Designers become orchestrators of agents</h3>
+            <p class="sp-where"><i class="mark human"></i>Moves designers toward direction</p>
+            <p class="sp-lead">Advanced practitioners now run several agents in parallel, and splitting the work that way turns design into a management job.</p>
+            <p>Claude Code offers experimental agent teams with shared task lists and plan approval, Codex runs parallel cloud tasks, and OpenPencil runs concurrent agents across regions of one canvas. Agentic Design School describes the job that results. <a class="src" href="https://agenticdesign.school/articles/orchestrating-a-design-team-of-agents">Agentic Design School</a></p>
+            <ol class="orch">
+              <li>Break the work into parts.</li>
+              <li>Write the contract each worker follows.</li>
+              <li>Set the quality gates.</li>
+              <li>Review the merged result.</li>
+            </ol>
+            <p>Enterprise designers are also building microtools and agentic workflows that let non-designers produce on-brand work from prebuilt components. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+            <div class="implication">
+              <p class="imp-head">What it means for the process</p>
+              <p>The designer’s role moves from making things to directing and curating them. Briefing, quality gates and review become explicit design skills.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="debate" id="diamond" aria-labelledby="debate-title">
+    <div class="wrap">
+      <div class="debate-intro">
+        <h2 id="debate-title">The diamond debate</h2>
+        <p>Cheap building has reopened the argument about the Double Diamond. Five camps have formed. Scroll through them and watch what each does to the shape.</p>
+      </div>
+
+      <div class="scrolly">
+        <div class="fig">
+          <h3 class="fig-title" id="fig-title">The Double Diamond</h3>
+          <p class="fig-sub" id="fig-sub">Discover, Define, Develop, Deliver: diverge and converge, twice.</p>
+
+          <svg viewBox="0 0 800 440" role="img" aria-labelledby="fig-title fig-sub">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" class="f-ink2"/>
+              </marker>
+            </defs>
+
+            <path class="ghost ov" data-on="2 3 4 5" d="M60 210 L230 70 L400 210 L570 70 L740 210 L570 350 L400 210 L230 350 Z"/>
+
+            <!-- Framing tint sits under the outline -->
+            <g class="ov" data-on="6">
+              <path class="tint-human" d="M230 70 L400 210 L230 350 Z"/>
+            </g>
+
+            <path class="shape" id="shape" d=""/>
+
+            <!-- Classic phase labels -->
+            <g class="ov" data-on="0 1 6">
+              <text class="lbl" x="150" y="216">Discover</text>
+              <text class="lbl" x="312" y="216">Define</text>
+              <text class="lbl" x="488" y="216">Develop</text>
+              <text class="lbl" x="652" y="216">Deliver</text>
+            </g>
+
+            <!-- Augment -->
+            <g class="ov" data-on="1">
+              <circle class="f-agent" cx="150" cy="176" r="8"/>
+              <circle class="f-agent" cx="312" cy="176" r="8"/>
+              <circle class="f-agent" cx="488" cy="176" r="8"/>
+              <circle class="f-agent" cx="652" cy="176" r="8"/>
+              <text class="lbl-s t-agent m-hide" x="150" y="243">Empathy</text>
+              <text class="lbl-s t-agent m-hide" x="312" y="243">Framing</text>
+              <text class="lbl-s t-agent m-hide" x="488" y="243">Ideation</text>
+              <text class="lbl-s t-agent m-hide" x="652" y="243">Iteration</text>
+              <rect class="f-human" x="391" y="201" width="18" height="18" transform="rotate(45 400 210)"/>
+              <rect class="f-human" x="731" y="201" width="18" height="18" transform="rotate(45 740 210)"/>
+              <g class="m-hide">
+                <circle class="f-agent" cx="262" cy="404" r="6"/>
+                <text class="lbl-s start" x="274" y="408">Agent in each phase</text>
+                <rect class="f-human" x="436" y="398" width="12" height="12" transform="rotate(45 442 404)"/>
+                <text class="lbl-s start" x="456" y="408">Human decision point</text>
+              </g>
+            </g>
+
+            <!-- Extend -->
+            <g class="ov" data-on="2">
+              <text class="lbl-s m-hide" x="108" y="206">Synthetic<tspan x="108" dy="15">research</tspan></text>
+              <text class="lbl-s m-hide" x="236" y="206">Intent<tspan x="236" dy="15">mapping</tspan></text>
+              <text class="lbl-s m-hide" x="366" y="206">Behavioral<tspan x="366" dy="15">prototyping</tspan></text>
+              <text class="lbl-s m-hide" x="494" y="214">Deliver</text>
+              <text class="lbl" x="660" y="216">Adapt</text>
+              <rect class="f-human" x="296" y="168" width="8" height="84" rx="2"/>
+              <rect class="f-human" x="556" y="168" width="8" height="84" rx="2"/>
+              <rect class="f-infra" x="312" y="134" width="16" height="20" rx="2"/>
+              <rect class="f-infra" x="572" y="134" width="16" height="20" rx="2"/>
+              <g class="m-hide">
+                <rect class="f-human" x="236" y="398" width="6" height="14" rx="1"/>
+                <text class="lbl-s start" x="250" y="410">Adversarial gate</text>
+                <rect class="f-infra" x="420" y="397" width="12" height="15" rx="2"/>
+                <text class="lbl-s start" x="440" y="410">Machine-readable spec</text>
+              </g>
+            </g>
+
+            <!-- Loop: Diamond Ring steps -->
+            <g class="ov" data-on="3">
+              <circle class="f-human" cx="400" cy="65" r="8"/>
+              <circle class="f-agent" cx="529.9" cy="140" r="8"/>
+              <circle class="f-human" cx="529.9" cy="290" r="8"/>
+              <circle class="f-agent" cx="400" cy="365" r="8"/>
+              <circle class="f-infra" cx="270.1" cy="290" r="8"/>
+              <circle class="f-human" cx="270.1" cy="140" r="8"/>
+              <path class="f-ink2" d="M541 208 L559 208 L550 224 Z"/>
+              <text class="lbl" x="400" y="40">Brief</text>
+              <text class="lbl start" x="552" y="132">Make many</text>
+              <text class="lbl start" x="552" y="312">Choose</text>
+              <text class="lbl" x="400" y="404">Build for real</text>
+              <text class="lbl end" x="248" y="312">Launch small</text>
+              <text class="lbl end" x="248" y="132">Measure, learn</text>
+              <text class="lbl-big" x="400" y="226">Repeat</text>
+            </g>
+
+            <!-- Collapse -->
+            <g class="ov" data-on="4">
+              <text class="lbl" x="140" y="186">Brief</text>
+              <g class="f-agent">
+                <circle cx="300" cy="170" r="5"/><circle cx="340" cy="150" r="5"/><circle cx="380" cy="128" r="5"/>
+                <circle cx="420" cy="108" r="5"/><circle cx="440" cy="160" r="5"/><circle cx="398" cy="172" r="5"/>
+                <circle cx="358" cy="180" r="5"/><circle cx="300" cy="250" r="5"/><circle cx="340" cy="270" r="5"/>
+                <circle cx="380" cy="292" r="5"/><circle cx="420" cy="312" r="5"/><circle cx="440" cy="260" r="5"/>
+                <circle cx="398" cy="248" r="5"/><circle cx="358" cy="240" r="5"/>
+              </g>
+              <text class="lbl" x="336" y="216">Generate wide</text>
+              <text class="lbl" x="605" y="216">Choose, build</text>
+            </g>
+
+            <!-- Defend: compressed -->
+            <g class="ov" data-on="5">
+              <text class="lbl lbl-cond m-hide" x="256" y="215">Discover</text>
+              <text class="lbl lbl-cond m-hide" x="336" y="215">Define</text>
+              <text class="lbl lbl-cond m-hide" x="464" y="215">Develop</text>
+              <text class="lbl lbl-cond m-hide" x="545" y="215">Deliver</text>
+              <path class="arc" d="M572 150 C 572 62, 476 62, 470 132" marker-end="url(#arrow)"/>
+              <path class="arc" d="M598 262 C 596 352, 480 352, 470 290" marker-end="url(#arrow)"/>
+              <text class="lbl-s m-hide" x="522" y="52">Work keeps returning to ideation</text>
+              <g class="m-hide">
+                <text class="lbl-s start" x="150" y="388">AI use in Discover</text>
+                <rect class="f-rule" x="150" y="396" width="160" height="7" rx="2"/>
+                <rect class="f-agent" x="150" y="396" width="115" height="7" rx="2"/>
+                <text class="lbl-s start" x="318" y="404">72%</text>
+                <text class="lbl-s start" x="470" y="388">AI use in Deliver</text>
+                <rect class="f-rule" x="470" y="396" width="160" height="7" rx="2"/>
+                <rect class="f-agent" x="470" y="396" width="66" height="7" rx="2"/>
+                <text class="lbl-s start" x="638" y="404">41%</text>
+              </g>
+            </g>
+
+            <!-- Framing -->
+            <g class="ov" data-on="6">
+              <circle cx="400" cy="210" r="17" fill="none" class="s-human" stroke-width="3"/>
+              <text class="lbl t-human" x="312" y="46">Problem framing</text>
+            </g>
+          </svg>
+
+          <div class="tabs" role="group" aria-label="Jump to a position">
+            <button class="tab" type="button" data-go="1">Augment</button>
+            <button class="tab" type="button" data-go="2">Extend</button>
+            <button class="tab" type="button" data-go="3">Loops</button>
+            <button class="tab" type="button" data-go="4">Collapse</button>
+            <button class="tab" type="button" data-go="5">Defend</button>
+            <button class="tab" type="button" data-go="6">Common ground</button>
+          </div>
+        </div>
+
+        <div class="steps">
+          <article class="step active" data-state="0">
+            <h3>Four phases, two diamonds</h3>
+            <p>The Design Council’s Double Diamond frames design as two rounds of diverging and converging: Discover and Define to find the right problem, Develop and Deliver to find the right solution.</p>
+            <p>Between mid-2025 and October 2026, proposed revisions fell into five groups.</p>
+            <p class="note">The doubts predate generative AI. In 2023, Richard Eisermann, who led the team that created the model, said it was “probably not” still fit for purpose: it reads as a straight line and has no step for measuring outcomes. <a href="https://muz.li/blog/design-process-vs-ai-workflow/">Muzli</a></p>
+          </article>
+
+          <article class="step" data-state="1">
+            <h3>Augment: AI in every phase</h3>
+            <p>Keep the four phases. Give each one an agent, and make the points where people decide explicit.</p>
+            <ul class="examples">
+              <li>
+                <a class="ex-name" href="https://www.tandfonline.com/doi/full/10.1080/08956308.2026.2705124">Augmented Double Diamond</a> <span class="ex-src">Hor et al., Research-Technology Management, August 2026</span>
+                <p>An agent per phase for empathy, problem framing, ideation and iteration. People steer through validation, direction and learning loops. It’s already taught in business schools.</p>
+                <span class="tag">Peer-reviewed, not empirically tested</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://doublediamond.substack.com/p/a2d2-framework-double-diamond-in">A2D2</a>
+                <p>An AI engine at the front of each diamond, with explicit decision points for humans.</p>
+                <span class="tag">Practitioner model</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003284141">Control levels by phase</a> <span class="ex-src">Korean study</span>
+                <p>Discover and Develop are collaborative, Define is human-led, and Deliver is AI-led with human oversight.</p>
+                <span class="tag">Academic study</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="step" data-state="2">
+            <h3>Extend: new phases, new outputs</h3>
+            <p>Rename the phases for agentic work, and add steps the original never had.</p>
+            <ul class="examples">
+              <li>
+                <a class="ex-name" href="https://www.uxmatters.com/mt/archives/2026/03/next-gen-agentic-ai-in-ux-design-evolving-the-double-diamond-process.php">Agentic Double Diamond</a> <span class="ex-src">UXmatters, March 2026</span>
+                <p>Discover becomes synthetic research, Define becomes intent mapping, and Develop becomes behavioral prototyping. A fifth phase, Adapt, follows delivery.</p>
+                <span class="tag">Practitioner model</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://asdlc.io/patterns/agentic-double-diamond/">Agentic Double Diamond</a> <span class="ex-src">ASDLC, July 2026</span>
+                <p>Each diamond is a “context furnace” that turns messy input into machine-readable specs. Adversarial gates at each convergence stop teams from building before the problem is defined. The spec becomes the product’s real source code.</p>
+                <span class="tag">Practitioner model</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="step" data-state="3">
+            <h3>Replace: from phases to loops</h3>
+            <p>AI flipped the economics behind the diamond. Making things is cheap now; the expensive part is waiting to learn.</p>
+            <div class="bars" role="img" aria-label="Jeff Humble’s worked example: a Double Diamond project takes 12 weeks, 848 hours and about 64 thousand dollars; the Experimentation Loop takes 4 weeks, 214 hours and about 16 thousand dollars.">
+              <div class="bars-legend"><span><i class="sw then"></i>Double Diamond project</span><span><i class="sw now"></i>Experimentation Loop</span></div>
+              <div class="metric"><span class="m-name">Weeks</span><div class="m-bars"><div class="b" style="--w:100%">12</div><div class="b now" style="--w:33%">4</div></div></div>
+              <div class="metric"><span class="m-name">Hours</span><div class="m-bars"><div class="b" style="--w:100%">848</div><div class="b now" style="--w:25%">214</div></div></div>
+              <div class="metric"><span class="m-name">Cost</span><div class="m-bars"><div class="b" style="--w:100%">$64K</div><div class="b now" style="--w:25%">$16K</div></div></div>
+            </div>
+            <p class="note" style="margin-top:0">Jeff Humble’s worked example, <a href="https://www.thefountaininstitute.com/blog/double-diamond-ai">Fountain Institute</a>, November 2025. <span class="tag">Practitioner estimate</span></p>
+            <ul class="examples">
+              <li>
+                <a class="ex-name" href="https://muz.li/blog/design-process-vs-ai-workflow/">Diamond Ring</a> <span class="ex-src">Muzli, October 2026</span>
+                <p>Brief, make many, choose, build for real, launch small, measure and learn, then repeat.</p>
+              </li>
+              <li>
+                <a class="ex-name" href="https://pathmode.io/blog/the-double-diamond-is-cracking">Intent Loop</a> <span class="ex-src">Pathmode, January 2026</span>
+                <p>Diagnose friction, write an intent spec, execute, verify. Live friction signals drive the loop.</p>
+              </li>
+              <li>
+                <a class="ex-name" href="https://qualz.ai/blog/double-diamond-dead-ai-augmented-research-process/">Spiral model</a> <span class="ex-src">Qualz</span>
+                <p>Research in tight cycles of collecting, analyzing and synthesizing, each lasting hours or days.</p>
+              </li>
+            </ul>
+          </article>
+
+          <article class="step" data-state="4">
+            <h3>Collapse: “the process is dead”</h3>
+            <p>Building is no longer the risky step, so most of the process can go.</p>
+            <ul class="examples">
+              <li>
+                <a class="ex-name" href="https://www.lennysnewsletter.com/p/the-design-process-is-dead">Jenny Wen</a> <span class="ex-src">Anthropic, on Lenny’s Podcast, March 2026</span>
+                <p>She called the taught process “basically dead,” because engineers running several coding agents ship before designers finish exploring. Her own time on mocking and prototyping fell sharply:</p>
+                <div class="bars" role="img" aria-label="Time spent mocking and prototyping fell from 60 to 70 percent to 30 to 40 percent.">
+                  <div class="metric"><span class="m-name">Before</span><div class="m-bars"><div class="b" style="--w:65%">60–70%</div></div></div>
+                  <div class="metric"><span class="m-name">Now</span><div class="m-bars"><div class="b now" style="--w:35%">30–40%</div></div></div>
+                </div>
+                <span class="tag">Practitioner account</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://www.designersforest.com/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software/">Patrick Neeman’s single diamond</a> <span class="ex-src">UX Collective, September 2026</span>
+                <p>What’s left is “a one-page brief and a wider generation step.”</p>
+                <span class="tag">Practitioner opinion</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="step" data-state="5">
+            <h3>Defend and test: compressed, not dead</h3>
+            <p>Reframe the model as risk management, then check it against how designers actually work.</p>
+            <ul class="examples">
+              <li>
+                <a class="ex-name" href="https://www.nngroup.com/articles/design-process-isnt-dead/">NN/g</a> <span class="ex-src">Gibbons and Wang, March 2026</span>
+                <p>Designers who seem to skip steps have internalized the process and compress it. Solution-first work suits only mature problem spaces, and its success stories may reflect survivorship bias. The answer is process literacy: choosing how much process a problem warrants.</p>
+                <span class="tag">Expert analysis</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://storage.googleapis.com/gweb-research2023-media/pubtools/1045046.pdf">Design observability</a> <span class="ex-src">Google, CSCW ’26</span>
+                <p>Across 4,036 version snapshots from 102 Figma files, work sat in ideation 93% of the time, and 80% of prototyping and 75% of testing transitions led back to it. Practice loops; it doesn’t run in a line.</p>
+                <span class="tag">Empirical study</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://jakobnielsenphd.substack.com/p/ux-roundup-20261019">Survey of 443 designers</a>
+                <p>AI use peaks in Discover at 72% and falls to 41% in Deliver, the reverse of where AI design tools are concentrated.</p>
+                <span class="tag">Survey</span>
+              </li>
+              <li>
+                <a class="ex-name" href="https://www.cambridge.org/core/journals/design-science/article/artificial-intelligence-across-design-thinking-a-qualitative-review/CE07228468DC484576B276095C367993">Design Science review</a> <span class="ex-src">Cambridge</span>
+                <p>The convergence points are the diamond’s strength for AI. They force outputs through selection and justification instead of letting them pile up.</p>
+                <span class="tag">Academic review</span>
+              </li>
+            </ul>
+            <p class="note">The Design Council hasn’t published an AI-specific revision. Its latest evolution of the model is the 2021 <a href="https://www.designcouncil.org.uk/resources/systemic-design-framework/">Systemic Design Framework</a>, which predates generative AI.</p>
+            <p class="note note-secondhand">One practitioner reports that the Council’s Chief Design Officer described that framework, at a June 2026 panel, as the Council’s answer for complexity. <a href="https://www.linkedin.com/pulse/diamonds-forever-why-ai-broke-double-business-model-pundarik-ranchhod-arkle">Pundarik Ranchhod</a></p>
+          </article>
+
+          <article class="step" data-state="6">
+            <h3>What the revisions share</h3>
+            <ul class="threads">
+              <li>Building used to be the risky step. Now it’s cheap.</li>
+              <li>The second diamond shrinks while generation widens.</li>
+              <li>Convergence points become the places where people keep control.</li>
+              <li>A measure-and-learn step gets added, closing the gap Eisermann named.</li>
+              <li>Briefs and specs are written for agents to execute, not only for people to read.</li>
+            </ul>
+            <p class="verdict-lead">Problem framing is the disputed ground.</p>
+            <p>Wen and Neeman treat it as something to compress. NN/g, the Augmented Double Diamond and ASDLC treat it as what must be protected.</p>
+            <p class="verdict">The real disagreement is about who gets to frame problems, and on what evidence, once building is cheap.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="model" aria-labelledby="model-title">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2 id="model-title">Who does what, phase by phase</h2>
+        <p>The four phases stay, and a fifth, Govern, runs alongside them continuously. Pick a phase to see how the work divides.</p>
+      </div>
+
+      <div class="model-grid">
+      <div class="model-pick">
+      <svg class="phase-svg" viewBox="0 0 600 200" aria-hidden="true">
+        <polygon class="ph" data-phase="discover" points="20,75 160,15 160,135"/>
+        <polygon class="ph" data-phase="define" points="160,15 300,75 160,135"/>
+        <polygon class="ph" data-phase="develop" points="300,75 440,15 440,135"/>
+        <polygon class="ph" data-phase="deliver" points="440,15 580,75 440,135"/>
+        <rect class="ph" data-phase="govern" x="20" y="152" width="560" height="38" rx="4"/>
+        <text class="ph-txt m-hide" data-for="discover" x="113" y="80">Discover</text>
+        <text class="ph-txt m-hide" data-for="define" x="207" y="80">Define</text>
+        <text class="ph-txt m-hide" data-for="develop" x="393" y="80">Develop</text>
+        <text class="ph-txt m-hide" data-for="deliver" x="487" y="80">Deliver</text>
+        <text class="ph-txt" data-for="govern" x="300" y="177">Govern, continuously</text>
+      </svg>
+      <div class="tabs phase-tabs" role="group" aria-label="Choose a phase">
+        <button class="tab" type="button" data-phase="discover">Discover</button>
+        <button class="tab" type="button" data-phase="define">Define</button>
+        <button class="tab" type="button" data-phase="develop">Develop</button>
+        <button class="tab" type="button" data-phase="deliver">Deliver</button>
+        <button class="tab" type="button" data-phase="govern">Govern</button>
+      </div>
+      </div>
+
+      <div class="phase-body" id="phase-body" aria-live="polite">
+        <div class="phase-head">
+          <h3 id="phase-name">Discover</h3>
+          <p id="phase-note"></p>
+        </div>
+        <div class="roles3">
+          <div class="role-col human"><h4>People</h4><ul id="ph-human"></ul></div>
+          <div class="role-col agent"><h4>Agents</h4><ul id="ph-agent"></ul></div>
+          <div class="role-col infra"><h4>Infrastructure</h4><ul id="ph-infra"></ul></div>
+        </div>
+      </div>
+      </div>
+
+      <p class="model-note">This model synthesizes the sources across this report; it isn’t a single published framework. It follows the augment and extend camps from the diamond debate. Teams working in loops can read each phase as a recurring activity rather than a step.</p>
+
+      <details class="full-table">
+        <summary>Show the full model as a table</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Phase</th><th scope="col">People</th><th scope="col">Agents</th><th scope="col">Infrastructure</th></tr></thead>
+            <tbody id="model-rows"></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="roles" aria-labelledby="roles-title">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2 id="roles-title">Roles, collaboration and risk</h2>
+        <p>Roles are blurring, collaboration is thinning, and trust in the output is low. Here’s the evidence, and where the checklist takes up each tension.</p>
+      </div>
+
+      <div class="roles-grid">
+        <div>
+          <h3 class="sub-title">How designers learn and work together</h3>
+          <svg class="slope" viewBox="0 0 680 320" role="img" aria-label="Learning from peers rose from 24% to 80%. Following leadership’s recommendations fell from 32% to 16%. Designers reporting less collaboration because of AI rose from 5% to 20%.">
+            <line class="sl-axis" x1="120" y1="56" x2="120" y2="305"/>
+            <line class="sl-axis" x1="330" y1="56" x2="330" y2="305"/>
+            <text class="sl-head" x="120" y="36">Previous year</text>
+            <text class="sl-head" x="330" y="36">2026</text>
+            <g class="series sl-lead">
+              <line class="sl-line" x1="120" y1="216.8" x2="330" y2="258.4"/>
+              <circle cx="120" cy="216.8" r="5"/><circle cx="330" cy="258.4" r="5"/>
+              <text class="sl-val" x="106" y="210" text-anchor="end">32%</text>
+              <text class="sl-val" x="344" y="282">16%</text>
+              <text class="sl-name m-hide" x="392" y="281">Follow leadership’s recommendations</text>
+            </g>
+            <g class="series sl-collab">
+              <line class="sl-line" x1="120" y1="287" x2="330" y2="248"/>
+              <circle cx="120" cy="287" r="5"/><circle cx="330" cy="248" r="5"/>
+              <text class="sl-val" x="106" y="298" text-anchor="end">5%</text>
+              <text class="sl-val" x="344" y="240">20%</text>
+              <text class="sl-name m-hide" x="392" y="239">Report less collaboration due to AI</text>
+            </g>
+            <g class="series sl-peer">
+              <line class="sl-line" x1="120" y1="237.6" x2="330" y2="92"/>
+              <circle cx="120" cy="237.6" r="5"/><circle cx="330" cy="92" r="5"/>
+              <text class="sl-val" x="106" y="246" text-anchor="end">24%</text>
+              <text class="sl-val" x="344" y="98">80%</text>
+              <text class="sl-name m-hide" x="392" y="97">Learn from peers</text>
+            </g>
+          </svg>
+          <ul class="slope-legend" aria-hidden="true">
+            <li><i class="sw-line"></i>Learn from peers</li>
+            <li><i class="sw-line lead"></i>Follow leadership’s recommendations</li>
+            <li><i class="sw-line collab"></i>Report less collaboration due to AI</li>
+          </ul>
+          <p class="caption">Learning has moved to peers and away from leadership, and four times as many designers now say AI has reduced collaboration. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+        </div>
+
+        <div>
+          <h3 class="sub-title">Whose job is design?</h3>
+          <div class="bars" role="img" aria-label="65% of designers do more product or engineering work; 40% say PMs and engineers do more design work.">
+            <div class="metric wide"><span class="m-name">Designers doing more product or engineering work</span><div class="m-bars"><div class="b now" style="--w:65%">65%</div></div></div>
+            <div class="metric wide"><span class="m-name">Say PMs and engineers do more design work</span><div class="m-bars"><div class="b now" style="--w:40%">40%</div></div></div>
+          </div>
+          <p class="caption"><a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+          <ul class="role-facts">
+            <li><strong>Ownership is less clear.</strong>A third of designers say collaboration is messier because of it. <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></li>
+            <li><strong>Leaders are building.</strong>Design leaders and managers ship code as much as individual contributors, and sometimes more. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></li>
+            <li><strong>The labor market is uneven.</strong>Senior and generalist roles are recovering faster than entry-level ones. <a class="src" href="https://thehuman2ai.com/research/radar/nngroup-state-of-ux-2026">NN/g</a></li>
+            <li><strong>Work is moving, not disappearing.</strong>Adobe’s research finds creative work being redistributed rather than replaced. <a class="src" href="https://www.adobe.com/cc-shared/assets/ai/research/adobe-ai-research-june-2026-how-ai-is-redistributing-creative-work.pdf">Adobe</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Six tensions</h3>
+      <ul class="tensions">
+        <li>
+          <h4>Output quality and trust</h4>
+          <p class="t-fig"><span class="t-num">16.7%</span><span>trust AI-generated design output highly or completely.</span></p>
+          <p>62% cite inconsistent or unreliable output as their biggest challenge. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a>, <a class="src" href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a></p>
+          <button class="text-btn t-jump" type="button" data-area="5">Checklist: Redesign workflow and quality gates</button>
+        </li>
+        <li>
+          <h4>Look-alike aesthetics</h4>
+          <p>Designers report that clients’ decks “look like they were generated by the same company,” because everyone starts from the same tool defaults. <a class="src" href="https://www.newyorker.com/culture/infinite-scroll/the-ai-design-aesthetic-thats-taking-over-the-internet">The New Yorker</a></p>
+          <button class="text-btn t-jump" type="button" data-area="5">Checklist: Redesign workflow and quality gates</button>
+        </li>
+        <li>
+          <h4>UI craft losing value</h4>
+          <p>NN/g argues that visual execution is being commoditized, and that differentiation now comes from deeper, research-grounded understanding. <a class="src" href="https://www.nngroup.com/articles/state-of-ux-2026/">NN/g</a></p>
+          <button class="text-btn t-jump" type="button" data-area="6">Checklist: Protect research rigor</button>
+        </li>
+        <li>
+          <h4>AI fatigue among end users</h4>
+          <p>NN/g describes a shift from hype to fatigue, which makes trust the central design challenge. <a class="src" href="https://thehuman2ai.com/research/radar/nngroup-state-of-ux-2026">NN/g</a></p>
+          <button class="text-btn t-jump" type="button" data-area="9">Checklist: Uphold ethics and accountability</button>
+        </li>
+        <li>
+          <h4>Ethics and compliance</h4>
+          <p class="t-fig"><span class="t-num">48.1%</span><span>of designers cite ethics as a barrier.</span></p>
+          <p>Data privacy and compliance are also major concerns. <a class="src" href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a></p>
+          <button class="text-btn t-jump" type="button" data-area="9">Checklist: Uphold ethics and accountability</button>
+        </li>
+        <li>
+          <h4>Thinning collaboration</h4>
+          <p class="t-fig"><span class="t-num">4×</span><span>as many designers report less collaboration because of AI as a year earlier.</span></p>
+          <p>Designers describe more solo work and more time spent prompting and in terminals. <a class="src" href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a></p>
+          <button class="text-btn t-jump" type="button" data-area="7">Checklist: Sustain collaboration and learning</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="checklist" aria-labelledby="checklist-title">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2 id="checklist-title">A checklist for design leaders</h2>
+        <p>Ten areas, ordered roughly from first steps to mature practice. Check off what your team has in place. Each area ends with a question to bring to your next team review.</p>
+      </div>
+
+      <div class="cl">
+        <div class="cl-overall">
+          <p class="cl-count" id="cl-count">0 of 51 done</p>
+          <div class="cl-bar" aria-hidden="true"><span id="cl-bar"></span></div>
+          <p class="cl-status" id="cl-status">Your progress is saved in this browser.</p>
+        </div>
+        <ol class="cl-index" id="cl-index" aria-label="Checklist areas"></ol>
+        <div class="cl-actions">
+          <button class="pill-btn" id="cl-export" type="button" hidden>Download summary</button>
+          <button class="pill-btn" id="cl-copy" type="button" hidden>Copy summary</button>
+          <button class="text-btn" id="cl-reset" type="button">Clear my progress</button>
+          <p class="cl-msg" id="cl-msg" aria-live="polite"></p>
+        </div>
+        <div class="cl-main" id="cl-main">
+          <h3 id="cl-title" tabindex="-1"></h3>
+          <p class="cl-where" id="cl-where"></p>
+          <ul class="cl-items" id="cl-items"></ul>
+          <div class="cl-question">
+            <p class="imp-head">For your next team review</p>
+            <p class="cl-q" id="cl-q"></p>
+          </div>
+          <div class="cl-nav">
+            <button type="button" id="cl-prev" class="prev"></button>
+            <button type="button" id="cl-next" class="next"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="takeaways" aria-labelledby="takeaways-title">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2 id="takeaways-title">What this means for design leaders</h2>
+        <p>Six takeaways drawn from the evidence above. Two are about the infrastructure agents depend on. Four are about the human work around it.</p>
+      </div>
+
+      <div class="impl-group">
+        <p class="impl-label"><i class="mark infra"></i>The infrastructure agents depend on</p>
+        <ul class="impl-items">
+          <li>
+            <h3>Treat context as a strategic asset</h3>
+            <p>Agent output is only as good as the design system, skills and research the agents can reach. Funding that infrastructure is now a leadership responsibility.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-shift="shift-systems">Shift: Systems as agent infrastructure</button>
+              <button class="text-btn" type="button" data-area="2">Checklist: Make the design system agent-ready</button>
+            </div>
+          </li>
+          <li>
+            <h3>Govern the skills layer</h3>
+            <p>Skills turn judgment into executable rules. They need owners, review and versioning, the same discipline a design system gets.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-shift="shift-skills">Shift: Skills encode judgment</button>
+              <button class="text-btn" type="button" data-area="3">Checklist: Govern the skills layer</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="impl-group">
+        <p class="impl-label"><i class="mark human"></i>The human work around it</p>
+        <ul class="impl-items">
+          <li>
+            <h3>Rebuild collaboration on purpose</h3>
+            <p>With collaboration thinning and learning moving to peers, create shared critique spaces, showcases for workflows and protected time to experiment. A tinkering culture doubles the likelihood that designers feel more creative and capable.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-jump="roles">Section: Roles and risks</button>
+              <button class="text-btn" type="button" data-area="7">Checklist: Sustain collaboration and learning</button>
+            </div>
+          </li>
+          <li>
+            <h3>Re-establish design’s standing upstream</h3>
+            <p>As production costs fall, design’s credibility depends on problem framing, research rigor, and holding the quality bar across roles that now overlap.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-jump="diamond">Section: The diamond debate</button>
+              <button class="text-btn" type="button" data-area="5">Checklist: Redesign workflow and quality gates</button>
+            </div>
+          </li>
+          <li>
+            <h3>Protect the pipeline for junior designers</h3>
+            <p>Agents absorb the production tasks juniors used to learn on. Teams need new apprenticeship paths, such as reviewing agent output, writing skills and assisting with research.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-jump="roles">Section: Roles and risks</button>
+              <button class="text-btn" type="button" data-area="8">Checklist: Develop people and roles</button>
+            </div>
+          </li>
+          <li>
+            <h3>Make evidence standards explicit</h3>
+            <p>As synthetic participants and automated synthesis spread, teams should state what counts as user evidence for each decision.</p>
+            <div class="impl-links">
+              <button class="text-btn" type="button" data-shift="shift-research">Shift: Research splits three ways</button>
+              <button class="text-btn" type="button" data-area="6">Checklist: Protect research rigor</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lens" id="lens">
+  <div class="lens-panel" id="lens-panel" role="dialog" aria-labelledby="lens-title" hidden>
+    <div class="lens-top">
+      <h2 id="lens-title">Evidence lens</h2>
+      <button class="lens-x" type="button" aria-label="Close the panel">×</button>
+    </div>
+    <p class="lens-intro">Figures and claims across the page are tagged by the kind of source behind them. Filled tags mark research and surveys; outlined tags mark claims and opinion. Select a type to show or hide it.</p>
+    <ul class="lens-types" id="lens-types"></ul>
+    <div class="lens-quick">
+      <button class="text-btn" type="button" data-preset="all">Show all</button>
+      <button class="text-btn" type="button" data-preset="strong">Research and surveys only</button>
+      <button class="text-btn lens-off" type="button" id="lens-off">Turn the lens off</button>
+    </div>
+  </div>
+  <button class="lens-btn" id="lens-btn" type="button" aria-expanded="false" aria-controls="lens-panel"><span class="dot" aria-hidden="true"></span><span class="lb-text">Evidence lens</span></button>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Most figures come from three surveys: Designer Fund and Foundation Capital (900 designers in more than 60 countries), Designlab (more than 200 designers, late 2025), and NN/g’s qualitative State of UX 2026.</p>
+    <p>Most Double Diamond revisions come from vendors or practitioners and haven’t been tested. Tool capabilities and benchmarks are self-reported by vendors.</p>
+    <details class="refs" id="references">
+      <summary>References and tools <span class="refs-count">60 sources</span></summary>
+      <div class="refs-body">
+        <p class="refs-intro">Every source cited in the underlying report, grouped by the same evidence types the lens uses. Each note says what the source supports here.</p>
+        <div class="refs-group">
+          <h3>Tools used</h3>
+          <ul>
+            <li><a href="https://www.perplexity.ai/">Perplexity Computer</a>: researched and cross-connected the sources below to compile the underlying report.</li>
+            <li><a href="https://claude.ai/">Claude</a> (Claude Opus 5.5, by Anthropic): designed and built this interactive page from the report, including the visuals, checklist and evidence lens.</li>
+            <li><a href="https://fonts.google.com/">Google Fonts</a>: the typefaces Bricolage Grotesque and Instrument Sans.</li>
+          </ul>
+        </div>
+        <div class="refs-group">
+          <h3>Studies and academic sources <span class="refs-n">5</span></h3>
+          <ul>
+            <li><a href="https://www.cambridge.org/core/journals/design-science/article/artificial-intelligence-across-design-thinking-a-qualitative-review/CE07228468DC484576B276095C367993">Design Science, Cambridge</a>: Qualitative review of AI across design thinking.</li>
+            <li><a href="https://storage.googleapis.com/gweb-research2023-media/pubtools/1045046.pdf">Google Research</a>: Design observability study of 4,036 Figma version snapshots, CSCW ’26.</li>
+            <li><a href="https://www.tandfonline.com/doi/full/10.1080/08956308.2026.2705124">Hor et al., Research-Technology Management</a>: The Augmented Double Diamond, August 2026.</li>
+            <li><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003284141">KCI</a>: Korean study of human and AI control levels across Double Diamond phases.</li>
+            <li><a href="https://link.springer.com/rwe/10.1007/978-3-031-75316-9_34-1">Springer</a>: Service-design reference entry mapping seven ways of collaborating with AI onto the four phases.</li>
+          </ul>
+        </div>
+        <div class="refs-group">
+          <h3>Surveys <span class="refs-n">4</span></h3>
+          <ul>
+            <li><a href="https://designerfund.com/blog/ai-in-design-2026">Designer Fund</a>: 2026 survey of about 900 designers: AI use, toolstack, collaboration and learning.</li>
+            <li><a href="https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf">Designlab</a>: AI in UX and Product Design Survey Report 2026.</li>
+            <li><a href="https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech">Foundation Capital</a>: Findings from the same survey: prototypes, design engineers, ownership and output quality.</li>
+            <li><a href="https://jakobnielsenphd.substack.com/p/ux-roundup-20261019">Jakob Nielsen</a>: UX Roundup, October 19, 2026: survey of 443 designers on AI use by phase.</li>
+          </ul>
+        </div>
+        <div class="refs-group">
+          <h3>Vendor and product sources <span class="refs-n">24</span></h3>
+          <ul>
+            <li><a href="https://www.adobe.com/cc-shared/assets/ai/research/adobe-ai-research-june-2026-how-ai-is-redistributing-creative-work.pdf">Adobe</a>: How AI is redistributing creative work, June 2026.</li>
+            <li><a href="https://www.anthropic.com/news/claude-design-anthropic-labs">Anthropic</a>: Launch of Claude Design, April 17, 2026.</li>
+            <li><a href="https://claude.com/resources/articles/claude-design-stays-on-brand-for-daily-work">Claude</a>: Claude Design checking output against imported design systems.</li>
+            <li><a href="https://claude.com/product/design">Claude</a>: Claude Design product page.</li>
+            <li><a href="https://clickup.com/blog/claude-skills-design/">ClickUp</a>: Claude skills for design, including testing output with and without a skill.</li>
+            <li><a href="https://dovetail.com/research/tools-for-researchers/">Dovetail</a>: AI agents, digital twins and AI-moderated interview tools.</li>
+            <li><a href="https://www.figma.com/resource-library/claude-skills-for-product-designers/">Figma</a>: Claude skills for product designers.</li>
+            <li><a href="https://www.figma.com/blog/figjam-your-coding-agents-whiteboard/">Figma</a>: FigJam as a whiteboard coding agents can read and write.</li>
+            <li><a href="https://www.figma.com/blog/the-figma-agent-is-here/">Figma</a>: Launch of the Figma agent.</li>
+            <li><a href="https://www.figma.com/blog/3-ways-product-designers-use-the-figma-agent/">Figma</a>: Library guidelines and multiplayer agent views.</li>
+            <li><a href="https://www.figma.com/resource-library/mcp-for-designers/">Figma</a>: MCP for designers: Code Connect and partner clients.</li>
+            <li><a href="https://www.figma.com/release-notes/">Figma</a>: Release notes: Make backends with a CMS, database and authentication.</li>
+            <li><a href="https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/">Figma</a>: The canvas opens to agents: use_figma, skills and self-correcting loops.</li>
+            <li><a href="https://developers.figma.com/docs/figma-mcp-server/code-connect-integration/">Figma Developer Docs</a>: Code Connect integration with the MCP server.</li>
+            <li><a href="https://help.figma.com/hc/en-us/articles/39252411778583-Figma-MCP-server-FAQs">Figma Help Center</a>: Figma MCP server FAQs.</li>
+            <li><a href="https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server">Figma Help Center</a>: Setting up the remote Figma MCP server.</li>
+            <li><a href="https://investor.figma.com/news-events/news/news-details/2026/Figma-Announces-Second-Quarter-2026-Financial-Results/default.aspx">Figma investor relations</a>: Second-quarter 2026 results: Code Layers and Make in production codebases.</li>
+            <li><a href="https://www.headway.io/even-keeled/design-systems-for-ai-and-agentic-development">Headway</a>: Three ways to feed design-system context to agents.</li>
+            <li><a href="https://www.headway.io/blog/design-systems-for-ai-agents">Headway</a>: What makes a design system agent-ready.</li>
+            <li><a href="https://www.lyssna.com/blog/ai-ux-research-tools/">Lyssna</a>: AI UX research tools, including synthetic participants.</li>
+            <li><a href="https://getperspective.ai/blog/best-ai-ux-research-tools-2026-ranked-by-stage">Perspective AI</a>: AI UX research tools ranked by stage: run, capture, synthesize.</li>
+            <li><a href="https://releases.sh/figma">releases.sh</a>: Figma release tracker: the Figma agent leaving beta.</li>
+            <li><a href="https://state-of-ai-in-design-systems.netlify.app/reading">State of AI in Design Systems</a>: zeroheight’s 2026 outlook and enterprise design-system MCP servers.</li>
+            <li><a href="https://storybook.js.org/blog/how-to-document-your-design-system-best-practices-tools/">Storybook</a>: 2026 Design Systems Report findings and the Storybook MCP benchmark.</li>
+          </ul>
+        </div>
+        <div class="refs-group">
+          <h3>Expert and practitioner writing <span class="refs-n">26</span></h3>
+          <ul>
+            <li><a href="https://www.aacsb.edu/insights/articles/2026/06/when-post-it-notes-are-not-enough">AACSB</a>: The Augmented Double Diamond in business-school teaching.</li>
+            <li><a href="https://agentmarketcap.ai/blog/2026/04/09/agent-native-ux-patterns-2026-human-agent-collaboration">Agent Market Cap</a>: Agent-native UX patterns for human–agent collaboration.</li>
+            <li><a href="https://agentgid.com/skills/category/design/">AgentGID</a>: Index of design and frontend skills.</li>
+            <li><a href="https://agenticdesign.school/articles/orchestrating-a-design-team-of-agents">Agentic Design School</a>: Orchestrating a design team of agents.</li>
+            <li><a href="https://asdlc.io/patterns/agentic-double-diamond/">ASDLC</a>: The Agentic Double Diamond pattern, July 2026.</li>
+            <li><a href="https://www.aufaitux.com/blog/ui-ux-trends/">AufaitUX</a>: Designing for AI agents as users.</li>
+            <li><a href="https://www.designcouncil.org.uk/resources/systemic-design-framework/">Design Council</a>: The Systemic Design Framework, 2021.</li>
+            <li><a href="https://www.designersforest.com/the-ux-double-diamond-is-dead-and-in-ai-only-one-survives-for-software/">Designers Forest</a>: Patrick Neeman’s single diamond.</li>
+            <li><a href="https://doublediamond.substack.com/p/a2d2-framework-double-diamond-in">Double Diamond Substack</a>: The A2D2 framework.</li>
+            <li><a href="https://www.thefountaininstitute.com/blog/double-diamond-ai">Fountain Institute</a>: Jeff Humble’s Experimentation Loop and cost comparison.</li>
+            <li><a href="https://www.intodesignsystems.com/agentic-design-systems">Into Design Systems</a>: Agentic design systems and semantic tokens.</li>
+            <li><a href="https://github.com/julianoczkowski/designer-skills">julianoczkowski/designer-skills</a>: A skill sequence that encodes a design process.</li>
+            <li><a href="https://www.lennysnewsletter.com/p/the-design-process-is-dead">Lenny’s Newsletter</a>: Jenny Wen: the design process is dead.</li>
+            <li><a href="https://marieclairedean.substack.com/p/i-built-63-design-skills-for-claude">Marie Claire Dean</a>: An open-source set of 63 design skills.</li>
+            <li><a href="https://muz.li/blog/design-process-vs-ai-workflow/">Muzli</a>: The Diamond Ring, and Richard Eisermann on the original model.</li>
+            <li><a href="https://www.nngroup.com/articles/state-of-ux-2026/">Nielsen Norman Group</a>: State of UX 2026.</li>
+            <li><a href="https://www.nngroup.com/articles/design-process-isnt-dead/">Nielsen Norman Group</a>: The design process isn’t dead: compressed, not dead.</li>
+            <li><a href="https://pathmode.io/blog/the-double-diamond-is-cracking">Pathmode</a>: The Intent Loop.</li>
+            <li><a href="https://qualz.ai/blog/double-diamond-dead-ai-augmented-research-process/">Qualz</a>: A spiral model for AI-augmented research.</li>
+            <li><a href="https://rogerwong.me/2026/03/the-design-process-is-dead-jenny-wen-head-of-design-at-claude">Roger Wong</a>: Notes on Jenny Wen’s interview, including her time spent prototyping.</li>
+            <li><a href="https://shumin.design/blog/ai-agent-design-2026/">Shumin</a>: The deliverable as a behavior specification.</li>
+            <li><a href="https://www.socialscript.in/blog/ai-design-agents-reshaping-ui-workflows-2026">SocialScript</a>: Prompt-to-product design agents.</li>
+            <li><a href="https://thegood.com/insights/ai-research-tools/">The Good</a>: Side-by-side test of synthetic users against real users.</li>
+            <li><a href="https://www.newyorker.com/culture/infinite-scroll/the-ai-design-aesthetic-thats-taking-over-the-internet">The New Yorker</a>: The look-alike AI design aesthetic.</li>
+            <li><a href="https://thehuman2ai.com/research/radar/nngroup-state-of-ux-2026">thehuman2ai</a>: Summary of NN/g’s State of UX 2026.</li>
+            <li><a href="https://www.uxmatters.com/mt/archives/2026/03/next-gen-agentic-ai-in-ux-design-evolving-the-double-diamond-process.php">UXmatters</a>: The Agentic Double Diamond, March 2026.</li>
+          </ul>
+        </div>
+        <div class="refs-group">
+          <h3>Secondhand account <span class="refs-n">1</span></h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/pulse/diamonds-forever-why-ai-broke-double-business-model-pundarik-ranchhod-arkle">Pundarik Ranchhod, LinkedIn</a>: Account of the Design Council’s June 2026 panel remarks.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* Theme */
+  var themeBtn = document.getElementById('theme');
+  var darkMq = window.matchMedia('(prefers-color-scheme: dark)');
+  function effectiveTheme() {
+    var t = document.documentElement.getAttribute('data-theme');
+    return t || (darkMq.matches ? 'dark' : 'light');
+  }
+  function labelTheme() { themeBtn.textContent = effectiveTheme() === 'dark' ? 'Light mode' : 'Dark mode'; }
+  themeBtn.addEventListener('click', function () {
+    var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('uxw-theme', next); } catch (e) {}
+    labelTheme();
+  });
+  if (darkMq.addEventListener) darkMq.addEventListener('change', labelTheme);
+  labelTheme();
+
+  /* Section links */
+  function jumpTo(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+  }
+  document.querySelectorAll('[data-jump]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); jumpTo(a.getAttribute('data-jump')); });
+  });
+  var navLinks = document.querySelectorAll('.nav-link');
+  var navSections = ['overview', 'shifts', 'diamond', 'model', 'roles', 'checklist'].map(function (id) { return document.getElementById(id); });
+  function markNav() {
+    var cur = 'overview';
+    navSections.forEach(function (sec) { if (sec.getBoundingClientRect().top < window.innerHeight * 0.4) cur = sec.id; });
+    navLinks.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('data-jump') === cur ? 'true' : 'false'); });
+  }
+
+  /* Then and now */
+  var scrub = document.getElementById('scrub');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.row'));
+  function setRows(v) {
+    rows.forEach(function (r, i) {
+      var now = i < v;
+      r.classList.toggle('is-now', now);
+      r.querySelector('.before').setAttribute('aria-hidden', now ? 'true' : 'false');
+      r.querySelector('.after').setAttribute('aria-hidden', now ? 'false' : 'true');
+    });
+    scrub.style.setProperty('--p', (v / rows.length * 100) + '%');
+    var text = v === 0 ? 'All shown as before'
+      : v === rows.length ? 'All shown as in 2026'
+      : v + ' of ' + rows.length + ' shown as in 2026';
+    scrub.setAttribute('aria-valuetext', text);
+  }
+  var sweep = null;
+  function stopSweep() { if (sweep) { clearInterval(sweep); sweep = null; } }
+  scrub.addEventListener('input', function () { stopSweep(); setRows(+scrub.value); });
+  scrub.addEventListener('pointerdown', stopSweep);
+  scrub.addEventListener('keydown', stopSweep);
+  if (reduce.matches) {
+    scrub.value = rows.length; setRows(rows.length);
+  } else {
+    setRows(0);
+    var started = false;
+    function startSweep() {
+      if (started) return;
+      started = true;
+      setTimeout(function () {
+        if (+scrub.value !== 0) return;
+        var i = 0;
+        sweep = setInterval(function () {
+          i += 1; scrub.value = i; setRows(i);
+          if (i >= rows.length) stopSweep();
+        }, 230);
+      }, 500);
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) { startSweep(); io.disconnect(); }
+      }, { threshold: 0.6 });
+      io.observe(document.querySelector('.rows'));
+    } else { startSweep(); }
+  }
+
+  /* Diamond morph */
+  var N = 240;
+  function resample(v) {
+    var segs = v.map(function (a, i) {
+      var b = v[(i + 1) % v.length];
+      return { a: a, b: b, len: Math.hypot(b[0] - a[0], b[1] - a[1]) };
+    });
+    var total = segs.reduce(function (s, g) { return s + g.len; }, 0);
+    var counts = segs.map(function (g) { return Math.max(1, Math.round(g.len / total * N)); });
+    var diff = N - counts.reduce(function (s, c) { return s + c; }, 0);
+    while (diff !== 0) {
+      var big = counts.indexOf(Math.max.apply(null, counts));
+      counts[big] += Math.sign(diff); diff -= Math.sign(diff);
+    }
+    var pts = [];
+    segs.forEach(function (g, i) {
+      for (var k = 0; k < counts[i]; k++) {
+        var t = k / counts[i];
+        pts.push([g.a[0] + (g.b[0] - g.a[0]) * t, g.a[1] + (g.b[1] - g.a[1]) * t]);
+      }
+    });
+    return pts;
+  }
+  function circle(cx, cy, r) {
+    var pts = [];
+    for (var i = 0; i < N; i++) {
+      var th = Math.PI + 2 * Math.PI * (i / N);
+      pts.push([cx + r * Math.cos(th), cy + r * Math.sin(th)]);
+    }
+    return pts;
+  }
+  var classic = [[60,210],[230,70],[400,210],[570,70],[740,210],[570,350],[400,210],[230,350]];
+  var extend = [[40,210],[170,80],[300,210],[430,80],[560,210],[660,130],[760,210],[660,290],[560,210],[430,340],[300,210],[170,340]];
+  var collapse = [[80,210],[80,200],[200,200],[470,50],[740,210],[470,370],[200,220],[80,220]];
+  var compressed = classic.map(function (p) { return [400 + (p[0] - 400) * 0.55, p[1]]; });
+
+  var SHAPES = [
+    resample(classic), resample(classic), resample(extend), circle(400, 215, 150),
+    resample(collapse), resample(compressed), resample(classic)
+  ];
+  var STATES = [
+    { title: 'The Double Diamond', sub: 'Discover, Define, Develop, Deliver: diverge and converge, twice.' },
+    { title: 'Augment', sub: 'Same shape. An agent in every phase, and people at the decision points.' },
+    { title: 'Extend', sub: 'Phases renamed for agents, gates at each convergence, and a fifth phase.' },
+    { title: 'Replace with loops', sub: 'Sequential phases give way to one continuous cycle.' },
+    { title: 'Collapse', sub: 'A one-page brief, then a single wide generation step.' },
+    { title: 'Compressed, not dead', sub: 'Still four phases, run faster by people who have internalized them.', narrow: true },
+    { title: 'The disputed ground', sub: 'Who frames the problem, and on what evidence, once building is cheap.' }
+  ];
+
+  var shapeEl = document.getElementById('shape');
+  var titleEl = document.getElementById('fig-title');
+  var subEl = document.getElementById('fig-sub');
+  var overlays = Array.prototype.slice.call(document.querySelectorAll('[data-on]'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.fig .tab'));
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.step'));
+
+  var cur = SHAPES[0].map(function (p) { return p.slice(); });
+  var raf = null;
+  var active = -1;
+
+  function draw(pts) {
+    var d = 'M' + pts.map(function (p) { return p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join('L') + 'Z';
+    shapeEl.setAttribute('d', d);
+  }
+  function morphTo(target) {
+    if (raf) cancelAnimationFrame(raf);
+    if (reduce.matches) { cur = target.map(function (p) { return p.slice(); }); draw(cur); return; }
+    var from = cur.map(function (p) { return p.slice(); });
+    var t0 = performance.now(), D = 950;
+    function frame(now) {
+      var t = Math.min(1, (now - t0) / D);
+      var e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      for (var i = 0; i < N; i++) {
+        cur[i][0] = from[i][0] + (target[i][0] - from[i][0]) * e;
+        cur[i][1] = from[i][1] + (target[i][1] - from[i][1]) * e;
+      }
+      draw(cur);
+      if (t < 1) raf = requestAnimationFrame(frame);
+    }
+    raf = requestAnimationFrame(frame);
+  }
+  function setState(i) {
+    if (i === active) return;
+    active = i;
+    morphTo(SHAPES[i]);
+    titleEl.textContent = STATES[i].title;
+    titleEl.classList.toggle('narrow', !!STATES[i].narrow);
+    subEl.textContent = STATES[i].sub;
+    overlays.forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-on').split(' ').indexOf(String(i)) > -1);
+    });
+    tabs.forEach(function (t) { t.setAttribute('aria-current', +t.getAttribute('data-go') === i ? 'true' : 'false'); });
+    steps.forEach(function (s) { s.classList.toggle('active', +s.getAttribute('data-state') === i); });
+  }
+
+  var fig = document.querySelector('.fig');
+  var mobileMq = window.matchMedia('(max-width: 900px)');
+  function refLine() {
+    if (mobileMq.matches) {
+      var b = Math.max(fig.getBoundingClientRect().bottom, 0);
+      return b + (window.innerHeight - b) * 0.35;
+    }
+    return window.innerHeight * 0.5;
+  }
+  function pick() {
+    var ref = refLine(), s = 0;
+    steps.forEach(function (el) { if (el.getBoundingClientRect().top < ref) s = +el.getAttribute('data-state'); });
+    setState(s);
+    markNav();
+  }
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { ticking = false; pick(); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var n = +t.getAttribute('data-go');
+      var el = steps.filter(function (s) { return +s.getAttribute('data-state') === n; })[0];
+      var top = window.scrollY + el.getBoundingClientRect().top - refLine() + 24;
+      window.scrollTo({ top: top, behavior: reduce.matches ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* Eight shifts */
+  var shiftBtns = Array.prototype.slice.call(document.querySelectorAll('.shift-btn'));
+  var shiftPanels = Array.prototype.slice.call(document.querySelectorAll('.shift-panel'));
+  function selectShift(id) {
+    shiftBtns.forEach(function (b) { b.setAttribute('aria-current', b.getAttribute('aria-controls') === id ? 'true' : 'false'); });
+    shiftPanels.forEach(function (p) {
+      if (p.id === id) {
+        if (p.hidden) {
+          p.hidden = false;
+          p.classList.remove('enter'); void p.offsetWidth;
+          if (!reduce.matches) p.classList.add('enter');
+        }
+      } else { p.hidden = true; }
+    });
+  }
+  shiftBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var id = b.getAttribute('aria-controls');
+      selectShift(id);
+      if (mobileMq.matches) {
+        var panel = document.getElementById(id);
+        panel.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* Phase matrix */
+  var PHASES = {
+    discover: { name: 'Discover', note: 'Where AI use peaks: 72% of surveyed designers use it in this phase.',
+      human: ['Framing the questions', 'Choosing evidence standards', 'Interpreting findings'],
+      agent: ['AI-moderated interviews', 'Transcription', 'Theme clustering'],
+      infra: ['A research repository agents can reach through MCP'] },
+    define: { name: 'Define', note: 'The disputed ground: some revisions compress it, others treat it as what must be protected.',
+      human: ['Framing the problem', 'Weighing tradeoffs', 'Aligning stakeholders'],
+      agent: ['Competitive teardowns', 'Synthesis drafts', 'Brief generation'],
+      infra: ['Skills for briefs and critique'] },
+    develop: { name: 'Develop', note: 'Generation is cheap, so exploration widens and choosing becomes the work.',
+      human: ['Art direction', 'Choosing among options', 'Critique'],
+      agent: ['Parallel exploration', 'States and variants', 'Content fills'],
+      infra: ['Canvas agents', 'Design system context', 'Skills'] },
+    deliver: { name: 'Deliver', note: 'Only 41% of surveyed designers use AI here, though AI design tools are concentrated on it.',
+      human: ['Quality gates', 'Accessibility judgment', 'Final review'],
+      agent: ['Code generation', 'Token sync', 'Documentation', 'Drift detection'],
+      infra: ['Figma MCP', 'Code Connect', 'Storybook MCP'] },
+    govern: { name: 'Govern', note: 'New, and continuous rather than a step. It runs alongside the other four phases.',
+      human: ['Maintaining skills and the system', 'Ethical review', 'Ownership decisions'],
+      agent: ['Compliance audits', 'Self-correcting loops'],
+      infra: ['An agent-ready design system', 'Agents files'] }
+  };
+  var phaseKeys = ['discover', 'define', 'develop', 'deliver', 'govern'];
+  var phaseBody = document.getElementById('phase-body');
+  function fillList(id, items) {
+    var ul = document.getElementById(id);
+    ul.textContent = '';
+    items.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+  }
+  var currentPhase = null;
+  function selectPhase(key, animate) {
+    if (key === currentPhase) return;
+    currentPhase = key;
+    var d = PHASES[key];
+    document.getElementById('phase-name').textContent = d.name;
+    document.getElementById('phase-note').textContent = d.note;
+    fillList('ph-human', d.human); fillList('ph-agent', d.agent); fillList('ph-infra', d.infra);
+    document.querySelectorAll('.ph').forEach(function (el) { el.classList.toggle('on', el.getAttribute('data-phase') === key); });
+    document.querySelectorAll('.ph-txt').forEach(function (el) { el.classList.toggle('on', el.getAttribute('data-for') === key); });
+    document.querySelectorAll('.phase-tabs .tab').forEach(function (el) { el.setAttribute('aria-current', el.getAttribute('data-phase') === key ? 'true' : 'false'); });
+    if (animate && !reduce.matches) { phaseBody.classList.remove('enter'); void phaseBody.offsetWidth; phaseBody.classList.add('enter'); }
+  }
+  document.querySelectorAll('.ph, .phase-tabs .tab').forEach(function (el) {
+    el.addEventListener('click', function () { selectPhase(el.getAttribute('data-phase'), true); });
+  });
+  var tbody = document.getElementById('model-rows');
+  phaseKeys.forEach(function (k) {
+    var d = PHASES[k], tr = document.createElement('tr');
+    var th = document.createElement('th'); th.scope = 'row'; th.textContent = d.name + (k === 'govern' ? ' (continuous)' : ''); tr.appendChild(th);
+    [d.human, d.agent, d.infra].forEach(function (items) { var td = document.createElement('td'); td.textContent = items.join(', '); tr.appendChild(td); });
+    tbody.appendChild(tr);
+  });
+  selectPhase('discover', false);
+
+  if (location.hash && /^#shift-/.test(location.hash) && document.getElementById(location.hash.slice(1))) {
+    selectShift(location.hash.slice(1));
+  }
+
+  draw(cur);
+  setState(0);
+  pick();
+
+  if (location.hash && location.hash.length > 1) {
+    var target = document.getElementById(location.hash.slice(1));
+    if (target) setTimeout(function () { target.scrollIntoView({ block: 'start' }); }, 50);
+  }
+})();
+</script>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var DF = 'https://designerfund.com/blog/ai-in-design-2026';
+  var AREAS = [
+    { name: 'Assess where you stand', when: 'First 30 days', q: 'Do we know how our design work actually gets done today, or only how it’s supposed to?', items: [
+      ['List every AI tool your team actually uses, including personal and internally built ones. The average designer now uses about seven.', 'Designer Fund', DF],
+      ['Map where AI shows up in each phase, and where it’s missing on purpose.'],
+      ['Find out who on the team has shipped AI-generated code, and through what review path.'],
+      ['Note which decisions now start from a prototype rather than a brief, and whether the problem was framed first.'],
+      ['Ask the team where AI has reduced collaboration or blurred ownership.'] ] },
+    { name: 'Make the design system agent-ready', q: 'Could an agent use our system correctly without a designer explaining it first?', items: [
+      ['Move tokens out of design tools into structured files, such as JSON or CSS variables, with semantic names like danger.background instead of red-500.', 'Into Design Systems', 'https://www.intodesignsystems.com/agentic-design-systems'],
+      ['Bring Figma and code components into one-to-one parity: names, states and structure.', 'Headway', 'https://www.headway.io/blog/design-systems-for-ai-agents'],
+      ['Set up Code Connect for your 10 to 15 most-used components first.', 'Figma Developer Docs', 'https://developers.figma.com/docs/figma-mcp-server/code-connect-integration/'],
+      ['Document when and why to use each component, not only what it is.'],
+      ['Pick one way to feed context to agents (an agents file, a design-system MCP server, or routing) and connect it.'],
+      ['Name an owner, and add automated checks that catch drift between design and code before it ships.'] ] },
+    { name: 'Govern the skills layer', q: 'Whose expertise are our agents applying, and who agreed to it?', items: [
+      ['Inventory the skills, prompts and agents files people already use, including personal ones.'],
+      ['Pick two or three recurring workflows, such as critique, state expansion, accessibility specs or interview synthesis, to turn into shared team skills.'],
+      ['Give every shared skill an owner, a version and a review date, the same discipline your design system gets.'],
+      ['Before adopting a skill, compare output with and without it.', 'ClickUp', 'https://clickup.com/blog/claude-skills-design/'],
+      ['Review community skills for quality, licensing and fit before using them on client or production work.'],
+      ['Record whose judgment each skill encodes, and how to challenge or change it.'] ] },
+    { name: 'Set up MCP and tool integrations safely', q: 'If an agent changed a shared library tonight, would we know, and could we undo it?', items: [
+      ['Approve a short list of MCP clients and servers, such as Figma, Storybook and your research repository, with clear permission scopes.'],
+      ['Confirm seat and plan requirements and usage limits for MCP and agent features.', 'Figma Help Center', 'https://help.figma.com/hc/en-us/articles/35281350665623-Figma-MCP-collection-How-to-set-up-the-Figma-remote-MCP-server'],
+      ['Check data-handling terms with legal and security, especially for research data and unreleased designs.'],
+      ['Decide which actions agents can take on their own and which need human approval, such as writing to shared libraries or opening pull requests.'],
+      ['Keep a record of what agents have changed in shared files and repositories.'] ] },
+    { name: 'Redesign workflow and quality gates', q: 'Where in our process does human judgment have to happen, and is that written down?', items: [
+      ['Add an explicit problem-framing step before anyone generates a prototype.'],
+      ['Require two or three meaningfully different directions before converging, to counter look-alike defaults.', 'The New Yorker', 'https://www.newyorker.com/culture/infinite-scroll/the-ai-design-aesthetic-thats-taking-over-the-internet'],
+      ['Define human quality gates for brand distinctiveness, accessibility, content accuracy and edge-case states.'],
+      ['Decide who reviews AI-generated code from designers before it reaches production.'],
+      ['Clarify ownership where design, product and engineering work now overlap. A third of designers say collaboration is messier because of it.', 'Foundation Capital', 'https://foundationcapital.com/ideas/how-ai-is-reshaping-design-in-tech'],
+      ['For agent orchestration, write the brief each agent works from, and run a review that merges the separate outputs into one design.'] ] },
+    { name: 'Protect research rigor', q: 'Would we trust this finding if we saw how it was produced?', items: [
+      ['Define what counts as evidence for each type of decision: real behavior, AI-moderated interviews, synthetic participants or heuristics.'],
+      ['Use synthetic participants only for early hypotheses or heuristic-style review, never as a substitute for behavioral data.', 'The Good', 'https://thegood.com/insights/ai-research-tools/'],
+      ['Require AI synthesis to cite back to source transcripts, and spot-check it against the raw data.'],
+      ['Update consent and data-retention practices to cover AI moderation and AI analysis.'],
+      ['Keep researchers in charge of framing studies and interpreting results.'] ] },
+    { name: 'Sustain collaboration and learning', q: 'Are we learning faster as a team, or only working faster as individuals?', items: [
+      ['Schedule regular sessions where people share workflows, since peer learning has become the main channel.', 'Designer Fund', DF],
+      ['Protect time for experiments and hackathons. A tinkering culture doubles the likelihood that designers feel more creative and capable.', 'Designer Fund', DF],
+      ['Keep live critique, even when individuals can work faster alone.'],
+      ['Give credit for internal tools and skills that team members build.'],
+      ['Use shared canvases and multiplayer agent views instead of private chats where possible.'] ] },
+    { name: 'Develop people and roles', q: 'What will our junior designers be good at in two years, and how will they get there?', items: [
+      ['Update role expectations to cover briefing agents, writing skills, prototyping in code and reviewing output.'],
+      ['Create apprenticeship paths for junior designers, such as reviewing agent output, maintaining skills and assisting with research.'],
+      ['Stop measuring productivity by output volume. Track decision quality and outcomes instead.'],
+      ['Build team literacy in agentic UX patterns: intent previews, autonomy controls, approvals, and audit and undo.'],
+      ['Talk openly about burnout, the pressure to produce more, and how the changes affect people’s identity as designers.'] ] },
+    { name: 'Uphold ethics and accountability', q: 'If this goes wrong, who answers for it, and to whom?', items: [
+      ['Assign clear accountability for AI-generated work that ships.'],
+      ['Add bias, copyright and privacy checks to design review.', 'Designlab', 'https://hs.designlab.com/hubfs/downloads/AI%20in%20UX%20and%20Product%20Design%20Survey%20Report%202026.pdf'],
+      ['Assess how agentic features in your own products affect users’ trust, control and recovery from errors.'],
+      ['Treat AI agents as a new class of users of your product, and consider the effects on accessibility and transparency.'],
+      ['Revisit these policies every quarter, because tools and terms change quickly.'] ] },
+    { name: 'Measure and report', q: 'Can we show that AI made our design better, not just faster?', items: [
+      ['Track a small set of signals: time from idea to a validated prototype, how often agents use the design system correctly, how much generated work needs rework, research coverage, and team sentiment about collaboration.'],
+      ['Report impact to executives in terms of decision quality and business outcomes, not only speed.'],
+      ['Re-run the first-30-days assessment every six months.'] ] }
+  ];
+  var TOTAL = 0, VALID = {};
+  AREAS.forEach(function (a, ai) { a.items.forEach(function (it, ii) { VALID['a' + (ai + 1) + '-' + (ii + 1)] = true; TOTAL++; }); });
+  function idOf(ai, ii) { return 'a' + (ai + 1) + '-' + (ii + 1); }
+
+  /* State */
+  var KEY = 'uxw-checklist-v1';
+  var checked = {};
+  var localOK = true;
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) JSON.parse(raw).forEach(function (id) { if (VALID[id]) checked[id] = true; });
+  } catch (e) { localOK = false; }
+  function list() { return Object.keys(checked).filter(function (k) { return checked[k]; }); }
+  function saveLocal() { try { localStorage.setItem(KEY, JSON.stringify(list())); } catch (e) { localOK = false; } }
+
+  var statusEl = document.getElementById('cl-status');
+  function setStatus(mode) {
+    statusEl.textContent = mode === 'account'
+      ? 'Your progress is saved to your account and follows you across devices. Only you can see it.'
+      : localOK ? 'Your progress is saved in this browser.' : 'Progress can’t be saved in this view.';
+  }
+
+  var remote = null, writing = false, dirty = false, timer = null, touchedEarly = false;
+  function scheduleRemote() {
+    if (!remote) { touchedEarly = true; return; }
+    dirty = true; clearTimeout(timer); timer = setTimeout(flush, 700);
+  }
+  function flush() {
+    if (!remote || writing || !dirty) return;
+    writing = true; dirty = false;
+    remote.set({ checked: list(), updatedAt: new Date().toISOString() }).then(function () {
+      setStatus('account');
+    }).catch(function () {
+      remote = null; setStatus('local');
+    }).then(function () {
+      writing = false; if (dirty) flush();
+    });
+  }
+
+  /* Rendering */
+  var indexEl = document.getElementById('cl-index');
+  var mainEl = document.getElementById('cl-main');
+  var itemsEl = document.getElementById('cl-items');
+  var current = 0;
+  var ciRefs = [];
+  AREAS.forEach(function (a, ai) {
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'ci-btn';
+    b.innerHTML = '<span class="ci-num"></span><span class="ci-name"></span><span class="ci-count"></span><span class="ci-bar"><span></span></span>';
+    b.querySelector('.ci-num').textContent = (ai + 1);
+    b.querySelector('.ci-name').textContent = a.name;
+    b.addEventListener('click', function () { show(ai, true); });
+    li.appendChild(b); indexEl.appendChild(li);
+    ciRefs.push(b);
+  });
+  function areaDone(ai) {
+    var n = 0; AREAS[ai].items.forEach(function (_, ii) { if (checked[idOf(ai, ii)]) n++; }); return n;
+  }
+  function updateCounts() {
+    var all = list().length;
+    document.getElementById('cl-count').textContent = all + ' of ' + TOTAL + ' done';
+    document.getElementById('cl-bar').style.width = (all / TOTAL * 100) + '%';
+    ciRefs.forEach(function (b, ai) {
+      var d = areaDone(ai), t = AREAS[ai].items.length;
+      var c = b.querySelector('.ci-count');
+      c.textContent = d === t ? 'Done' : d + '/' + t;
+      c.classList.toggle('done', d === t);
+      b.querySelector('.ci-bar span').style.width = (d / t * 100) + '%';
+      b.setAttribute('aria-label', (ai + 1) + '. ' + AREAS[ai].name + ', ' + d + ' of ' + t + ' done');
+    });
+  }
+  function show(ai, animate) {
+    current = ai;
+    var a = AREAS[ai];
+    document.getElementById('cl-title').textContent = a.name;
+    document.getElementById('cl-where').textContent = 'Area ' + (ai + 1) + ' of ' + AREAS.length + (a.when ? ', ' + a.when.toLowerCase() : '');
+    document.getElementById('cl-q').textContent = a.q;
+    itemsEl.textContent = '';
+    a.items.forEach(function (it, ii) {
+      var id = idOf(ai, ii);
+      var li = document.createElement('li');
+      var label = document.createElement('label'); label.className = 'cl-item';
+      var box = document.createElement('input'); box.type = 'checkbox'; box.checked = !!checked[id];
+      box.addEventListener('change', function () {
+        if (box.checked) checked[id] = true; else delete checked[id];
+        saveLocal(); scheduleRemote(); updateCounts();
+      });
+      var txt = document.createElement('span'); txt.className = 'cl-text'; txt.textContent = it[0];
+      label.appendChild(box); label.appendChild(txt); li.appendChild(label);
+      if (it[1]) {
+        var src = document.createElement('a'); src.className = 'src cl-src'; src.href = it[2]; src.textContent = it[1];
+        src.target = '_blank'; src.rel = 'noopener';
+        li.appendChild(src);
+      }
+      itemsEl.appendChild(li);
+    });
+    var prev = document.getElementById('cl-prev'), next = document.getElementById('cl-next');
+    prev.hidden = ai === 0;
+    next.hidden = ai === AREAS.length - 1;
+    if (ai > 0) prev.textContent = 'Previous: ' + AREAS[ai - 1].name;
+    if (ai < AREAS.length - 1) next.textContent = 'Next: ' + AREAS[ai + 1].name;
+    ciRefs.forEach(function (b, i) { b.setAttribute('aria-current', i === ai ? 'true' : 'false'); });
+    if (animate && !reduce.matches) { mainEl.classList.remove('enter'); void mainEl.offsetWidth; mainEl.classList.add('enter'); }
+    var chip = ciRefs[ai];
+    if (chip.parentNode.parentNode.scrollWidth > chip.parentNode.parentNode.clientWidth) {
+      var list_ = chip.parentNode.parentNode;
+      list_.scrollTo({ left: chip.parentNode.offsetLeft - 20, behavior: reduce.matches ? 'auto' : 'smooth' });
+    }
+  }
+  function goStep(ai) {
+    show(ai, true);
+    var top = mainEl.getBoundingClientRect().top;
+    if (top < 80) {
+      mainEl.scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+    }
+    document.getElementById('cl-title').focus({ preventScroll: true });
+  }
+  document.getElementById('cl-prev').addEventListener('click', function () { goStep(current - 1); });
+  document.getElementById('cl-next').addEventListener('click', function () { goStep(current + 1); });
+
+  /* Summary */
+  function summary() {
+    var d = new Date();
+    var lines = ['# Design leader checklist', '', 'From “UX workflow shifts (2026) — A report” by Uday Gajendar. Progress as of ' + d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + ': ' + list().length + ' of ' + TOTAL + ' done.', ''];
+    AREAS.forEach(function (a, ai) {
+      lines.push('## ' + (ai + 1) + '. ' + a.name + ' (' + areaDone(ai) + ' of ' + a.items.length + ')', '');
+      a.items.forEach(function (it, ii) { lines.push('- [' + (checked[idOf(ai, ii)] ? 'x' : ' ') + '] ' + it[0]); });
+      lines.push('', 'Review question: ' + a.q, '');
+    });
+    return lines.join('\n');
+  }
+  var msgEl = document.getElementById('cl-msg');
+  function msg(t) { msgEl.textContent = t; }
+  var exportBtn = document.getElementById('cl-export'), copyBtn = document.getElementById('cl-copy');
+  var downloads = null, plainDownload = false;
+  function offerCopy() { exportBtn.hidden = true; copyBtn.hidden = false; }
+  copyBtn.addEventListener('click', function () {
+    if (!navigator.clipboard) { msg('Copying isn’t available here.'); return; }
+    navigator.clipboard.writeText(summary()).then(function () { msg('Summary copied as Markdown.'); })
+      .catch(function () { msg('Copying isn’t available here.'); });
+  });
+  exportBtn.addEventListener('click', function () {
+    if (!downloads) {
+      if (!plainDownload) return;
+      try {
+        var blob = new Blob([summary()], { type: 'text/markdown' });
+        var href = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = href; a.download = 'design-leader-checklist.md';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(href); }, 1000);
+        msg('Summary downloaded.');
+      } catch (e) { msg('Downloads aren’t available here, so you can copy the summary instead.'); offerCopy(); }
+      return;
+    }
+    msg('');
+    downloads.save({ filename: 'design-leader-checklist.md', data: summary() }).then(function (r) {
+      if (r && r.status === 'saved') msg('Summary downloaded.');
+    }).catch(function (e) {
+      var code = e && e.code;
+      if (code === 'declined') return;
+      if (code === 'rate_limited') { msg('A save prompt is already open.'); return; }
+      msg('Downloads aren’t available here, so you can copy the summary instead.');
+      offerCopy();
+    });
+  });
+
+  var resetBtn = document.getElementById('cl-reset'), resetTimer = null;
+  resetBtn.addEventListener('click', function () {
+    if (!resetBtn.classList.contains('confirm')) {
+      resetBtn.classList.add('confirm'); resetBtn.textContent = 'Click again to clear all progress';
+      resetTimer = setTimeout(function () { resetBtn.classList.remove('confirm'); resetBtn.textContent = 'Clear my progress'; }, 4000);
+      return;
+    }
+    clearTimeout(resetTimer);
+    resetBtn.classList.remove('confirm'); resetBtn.textContent = 'Clear my progress';
+    checked = {}; saveLocal(); scheduleRemote(); updateCounts(); show(current, false);
+    msg('Progress cleared.');
+  });
+
+  document.querySelectorAll('[data-area]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      show(+btn.getAttribute('data-area') - 1, true);
+      document.querySelector('.cl').scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+      document.getElementById('cl-title').focus({ preventScroll: true });
+    });
+  });
+
+  document.querySelectorAll('[data-shift]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.querySelector('.shift-btn[aria-controls="' + btn.getAttribute('data-shift') + '"]');
+      if (target) target.click();
+      if (!window.matchMedia('(max-width: 900px)').matches) {
+        document.getElementById('shifts').scrollIntoView({ behavior: reduce.matches ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  updateCounts(); show(0, false); setStatus('local');
+
+  /* Capabilities: account-synced progress and downloads, when this view offers them */
+  if (window.claude && typeof window.claude.use === 'function') {
+    window.claude.use('downloads').then(function (dl) {
+      if (dl) { downloads = dl; exportBtn.hidden = false; } else offerCopy();
+    }).catch(offerCopy);
+    Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (r) {
+      var db = r[0], user = r[1];
+      if (!db || !user) return null;
+      return user.id().then(function (uid) {
+        if (!uid) return null;
+        var ref = db.doc('data/users/' + uid + '/checklist');
+        return ref.get().then(function (snap) {
+          remote = ref;
+          if (snap.exists && !touchedEarly) {
+            var d = snap.data() || {};
+            checked = {};
+            (Array.isArray(d.checked) ? d.checked : []).forEach(function (id) { if (VALID[id]) checked[id] = true; });
+            saveLocal(); updateCounts(); show(current, false);
+            setStatus('account');
+          } else if (list().length || touchedEarly) {
+            dirty = true; flush();
+          }
+        });
+      });
+    }).catch(function () { remote = null; setStatus('local'); });
+  } else {
+    plainDownload = true;
+    exportBtn.hidden = false;
+    copyBtn.hidden = false;
+  }
+})();
+</script>
+<script>
+(function () {
+  var TYPES = [
+    { key: 'study', tag: 'Study', desc: 'Peer-reviewed or empirical research' },
+    { key: 'survey', tag: 'Survey', desc: 'Surveys of designers' },
+    { key: 'vendor', tag: 'Vendor claim', desc: 'A company describing its own product or results' },
+    { key: 'expert', tag: 'Practitioner view', desc: 'Expert analysis, practitioner models and opinion' },
+    { key: 'secondhand', tag: 'Secondhand', desc: 'One person’s account of what someone else said' },
+    { key: 'synthesis', tag: 'Synthesis', desc: 'The report’s own reading across sources' }
+  ];
+  var TAG = {};
+  TYPES.forEach(function (t) { TAG[t.key] = t; });
+  var MAP = [
+    ['.rows .row:nth-child(1)', 'survey'], ['.rows .row:nth-child(2)', 'survey'], ['.rows .row:nth-child(3)', 'survey'],
+    ['.rows .row:nth-child(4)', 'vendor'], ['.rows .row:nth-child(5)', 'vendor'], ['.rows .row:nth-child(6)', 'synthesis'],
+    ['.rows .row:nth-child(7)', 'vendor'], ['.rows .row:nth-child(8)', 'synthesis'], ['.rows .row:nth-child(9)', 'survey'],
+    ['#shift-prototypes .figs > div', 'survey'], ['#shift-prototypes .figs + p', 'vendor'],
+    ['#shift-object .chips + p', 'expert'], ['#shift-object .chips + p + p', 'expert'],
+    ['#shift-canvas .timeline > li', 'vendor'],
+    ['#shift-mcp .hub + p', 'vendor'], ['#shift-mcp .figs > div', 'vendor'], ['#shift-mcp .figs + p', 'vendor'],
+    ['#shift-skills .sp-lead + p', 'vendor'], ['#shift-skills .chips + p:not(.src)', 'vendor'], ['#shift-skills .figs > div', 'expert'],
+    ['#shift-systems .sp-lead + p', 'vendor'], ['#shift-systems .split3 + p', 'vendor'], ['#shift-systems .bars', 'survey'],
+    ['#shift-research .sp-lead', 'vendor'], ['#shift-research .split3 + p', 'expert'], ['#shift-research .figs > div', 'survey'],
+    ['#shift-orchestration .sp-lead + p', 'expert'], ['#shift-orchestration .orch + p', 'survey'],
+    ['.step[data-state="0"] .note', 'expert'],
+    ['.step[data-state="1"] .examples > li:nth-child(1)', 'study'], ['.step[data-state="1"] .examples > li:nth-child(2)', 'expert'], ['.step[data-state="1"] .examples > li:nth-child(3)', 'study'],
+    ['.step[data-state="2"] .examples > li', 'expert'],
+    ['.step[data-state="3"] .note', 'expert'], ['.step[data-state="3"] .examples > li', 'expert'],
+    ['.step[data-state="4"] .examples > li', 'expert'],
+    ['.step[data-state="5"] .examples > li:nth-child(1)', 'expert'], ['.step[data-state="5"] .examples > li:nth-child(2)', 'study'],
+    ['.step[data-state="5"] .examples > li:nth-child(3)', 'survey'], ['.step[data-state="5"] .examples > li:nth-child(4)', 'study'],
+    ['.step[data-state="5"] .note-secondhand', 'secondhand'],
+    ['#roles .roles-grid > div:first-child .caption', 'survey'], ['#roles .roles-grid > div:nth-child(2) .bars', 'survey'],
+    ['#roles .role-facts > li:nth-child(1)', 'survey'], ['#roles .role-facts > li:nth-child(2)', 'survey'], ['#roles .role-facts > li:nth-child(3)', 'expert'], ['#roles .role-facts > li:nth-child(4)', 'vendor'],
+    ['.tensions > li:nth-child(1)', 'survey'], ['.tensions > li:nth-child(2)', 'expert'], ['.tensions > li:nth-child(3)', 'expert'],
+    ['.tensions > li:nth-child(4)', 'expert'], ['.tensions > li:nth-child(5)', 'survey'], ['.tensions > li:nth-child(6)', 'survey'],
+    ['#model .model-note', 'synthesis'], ['#takeaways .impl-items > li', 'synthesis']
+  ];
+  var counts = {};
+  MAP.forEach(function (m) {
+    document.querySelectorAll(m[0]).forEach(function (el) {
+      if (el.hasAttribute('data-ev')) return;
+      var type = m[1];
+      el.setAttribute('data-ev', type);
+      counts[type] = (counts[type] || 0) + 1;
+      var own = el.querySelector(':scope > .tag');
+      if (own) { own.classList.add('ev-mark', 'evs-' + type); return; }
+      var badge = document.createElement('span');
+      badge.className = 'ev-mark ev-badge evs-' + type;
+      badge.textContent = TAG[type].tag;
+      var host = el.matches('.row') ? el.querySelector('.dim') : el;
+      var before = host.querySelector(':scope > button, :scope > .impl-links');
+      if (before) host.insertBefore(badge, before); else host.appendChild(badge);
+    });
+  });
+
+  var btn = document.getElementById('lens-btn');
+  var panel = document.getElementById('lens-panel');
+  var typesEl = document.getElementById('lens-types');
+  var closeBtn = panel.querySelector('.lens-x');
+  var active = {};
+  TYPES.forEach(function (t) { active[t.key] = true; });
+
+  TYPES.forEach(function (t) {
+    if (!counts[t.key]) return;
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'lens-type'; b.setAttribute('data-type', t.key); b.setAttribute('aria-pressed', 'true');
+    b.innerHTML = '<span class="ev-sample evs-' + t.key + '"></span><span class="lt-desc"></span><span class="lt-count"></span>';
+    b.querySelector('.ev-sample').textContent = t.tag;
+    b.querySelector('.lt-desc').textContent = t.desc;
+    b.querySelector('.lt-count').textContent = counts[t.key];
+    b.setAttribute('aria-label', t.tag + ': ' + t.desc + '. ' + counts[t.key] + ' on this page.');
+    b.addEventListener('click', function () { active[t.key] = !active[t.key]; apply(); });
+    li.appendChild(b); typesEl.appendChild(li);
+  });
+
+  function apply() {
+    document.querySelectorAll('[data-ev]').forEach(function (el) {
+      el.classList.toggle('ev-dim', !active[el.getAttribute('data-ev')]);
+    });
+    typesEl.querySelectorAll('.lens-type').forEach(function (b) {
+      b.setAttribute('aria-pressed', active[b.getAttribute('data-type')] ? 'true' : 'false');
+    });
+  }
+  function setLens(on) {
+    document.body.classList.toggle('lens-on', on);
+    btn.querySelector('.lb-text').textContent = on ? 'Evidence lens is on' : 'Evidence lens';
+  }
+  function openPanel(open) {
+    panel.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) { setLens(true); closeBtn.focus(); }
+  }
+  btn.addEventListener('click', function () { openPanel(panel.hidden); });
+  closeBtn.addEventListener('click', function () { openPanel(false); btn.focus(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !panel.hidden) { openPanel(false); btn.focus(); }
+  });
+  panel.querySelectorAll('[data-preset]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var strong = b.getAttribute('data-preset') === 'strong';
+      TYPES.forEach(function (t) { active[t.key] = !strong || t.key === 'study' || t.key === 'survey'; });
+      apply();
+    });
+  });
+  if (location.hash === '#references') { var refs = document.getElementById('references'); if (refs) refs.open = true; }
+  document.getElementById('lens-off').addEventListener('click', function () {
+    TYPES.forEach(function (t) { active[t.key] = true; });
+    apply(); setLens(false); openPanel(false); btn.focus();
+  });
+})();
+</script>
+</body>
+</html>
