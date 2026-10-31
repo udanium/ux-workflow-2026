@@ -3,43 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>UX workflow shifts (2026) — A report</title>
-<meta name="description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<title>UX Workflow Shifts in 2026 — A report</title>
+<meta name="description" content="The work moved upstream and into infrastructure. A synthesis of 65 sources on how AI changed the UX design workflow in 2026, with eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
 <meta name="author" content="Uday Gajendar">
 <link rel="canonical" href="https://udanium.github.io/ux-workflow-2026/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UX workflow shifts (2026) — A report">
-<meta property="og:description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta property="og:title" content="UX Workflow Shifts in 2026 — A report">
+<meta property="og:description" content="The work moved upstream and into infrastructure. A synthesis of 65 sources on how AI changed the UX design workflow in 2026, with eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
 <meta property="og:url" content="https://udanium.github.io/ux-workflow-2026/">
-<meta property="og:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v3.png">
+<meta property="og:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v4.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1254">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="UX workflow shifts (2026) — A report">
-<meta name="twitter:description" content="A synthesis of 65 sources on how AI changed the UX design workflow in 2026: eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
-<meta name="twitter:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v3.png">
-<meta name="theme-color" content="#EDEFF3">
+<meta name="twitter:title" content="UX Workflow Shifts in 2026 — A report">
+<meta name="twitter:description" content="The work moved upstream and into infrastructure. A synthesis of 65 sources on how AI changed the UX design workflow in 2026, with eight shifts, the Double Diamond debate, a phase-by-phase model, a checklist for design leaders and an evidence lens. By Uday Gajendar.">
+<meta name="twitter:image" content="https://udanium.github.io/ux-workflow-2026/og-image-v4.png">
+<meta name="theme-color" content="#F5F7F2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%A0%3C/text%3E%3C/svg%3E">
 <script>
   try { var t = localStorage.getItem('uxw-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --canvas: #EDEFF3;
-  --surface: #F7F8FA;
-  --ink: #232A4D;
-  --ink-2: #565D7C;
-  --rule: #C6CAD7;
-  --rule-soft: #DADDE6;
-  --human: #B3306A;
-  --agent: #137782;
-  --infra: #8C6B12;
-  --shape-fill: rgba(35, 42, 77, .06);
-  --ghost: rgba(35, 42, 77, .38);
-  --glass: rgba(237, 239, 243, .86);
+  --canvas: #F5F7F2;
+  --surface: #FBFCF9;
+  --ink: #1F2D27;
+  --ink-2: #56645C;
+  --rule: rgba(31, 45, 39, .22);
+  --rule-soft: rgba(31, 45, 39, .11);
+  --human: #B03A5E;
+  --agent: #1E6F8E;
+  --infra: #8A6410;
+  --shape-fill: rgba(31, 45, 39, .06);
+  --ghost: rgba(31, 45, 39, .38);
+  --glass: rgba(245, 247, 242, .86);
+  --t-sage: #E8F0E4;
+  --t-clay: #F6ECE4;
+  --t-butter: #F3F0DC;
+  --t-mist: #E5EEF0;
   --header-h: 60px;
   --display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --text: "Instrument Sans", "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -50,34 +54,42 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --canvas: #151A2E;
-    --surface: #1C2139;
-    --ink: #E7E9F3;
-    --ink-2: #A6ABC4;
-    --rule: #3A4160;
-    --rule-soft: #282E49;
-    --human: #EC79A5;
-    --agent: #58C8D1;
-    --infra: #DDB75A;
-    --shape-fill: rgba(231, 233, 243, .06);
-    --ghost: rgba(231, 233, 243, .38);
-    --glass: rgba(21, 26, 46, .86);
+    --canvas: #141B17;
+    --surface: #1B231F;
+    --ink: #E6ECE7;
+    --ink-2: #A5B2AA;
+    --rule: rgba(230, 236, 231, .22);
+    --rule-soft: rgba(230, 236, 231, .11);
+    --human: #EB7A9A;
+    --agent: #5FB8D6;
+    --infra: #D9B45A;
+    --shape-fill: rgba(230, 236, 231, .06);
+    --ghost: rgba(230, 236, 231, .38);
+    --glass: rgba(20, 27, 23, .86);
+    --t-sage: #18231C;
+    --t-clay: #251C19;
+    --t-butter: #23211A;
+    --t-mist: #172126;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --canvas: #151A2E;
-  --surface: #1C2139;
-  --ink: #E7E9F3;
-  --ink-2: #A6ABC4;
-  --rule: #3A4160;
-  --rule-soft: #282E49;
-  --human: #EC79A5;
-  --agent: #58C8D1;
-  --infra: #DDB75A;
-  --shape-fill: rgba(231, 233, 243, .06);
-  --ghost: rgba(231, 233, 243, .38);
-  --glass: rgba(21, 26, 46, .86);
+  --canvas: #141B17;
+  --surface: #1B231F;
+  --ink: #E6ECE7;
+  --ink-2: #A5B2AA;
+  --rule: rgba(230, 236, 231, .22);
+  --rule-soft: rgba(230, 236, 231, .11);
+  --human: #EB7A9A;
+  --agent: #5FB8D6;
+  --infra: #D9B45A;
+  --shape-fill: rgba(230, 236, 231, .06);
+  --ghost: rgba(230, 236, 231, .38);
+  --glass: rgba(20, 27, 23, .86);
+  --t-sage: #18231C;
+  --t-clay: #251C19;
+  --t-butter: #23211A;
+  --t-mist: #172126;
   color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: inherit; }
@@ -136,8 +148,15 @@ img, svg { max-width: 100%; }
 @media (max-width: 560px) { .brand-sub { display: none; } }
 .framing { border-bottom: 1px solid var(--rule-soft); padding-bottom: clamp(32px, 4.5vw, 56px); margin-bottom: clamp(40px, 6vw, 72px); }
 .framing-inner { max-width: 62ch; }
-.framing-inner p { font-size: 1.2rem; line-height: 1.58; margin: 0 0 1em; }
-.framing-inner .byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; font-size: .95rem; line-height: 1.4; color: var(--ink-2); margin: 1.5em 0 0; }
+.framing-inner p { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-size: 1.32rem; line-height: 1.6; font-variation-settings: "opsz" 18; margin: 0 0 1em; }
+.framing-inner p:last-child { margin-bottom: 0; }
+.framing-inner strong { font-weight: 650; }
+.intro summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; width: fit-content; font-size: .95rem; font-weight: 600; color: var(--ink); padding: 4px 0; margin-bottom: 14px; }
+.intro summary::-webkit-details-marker { display: none; }
+.intro summary::before { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform .2s ease; margin-left: 2px; }
+.intro[open] summary::before { transform: rotate(45deg); }
+.intro summary:hover { color: var(--ink-2); }
+.framing .byline { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; font-size: .95rem; line-height: 1.4; color: var(--ink-2); margin: 1.6em 0 0; }
 .byline strong { color: var(--ink); font-weight: 600; }
 
 /* Hero */
@@ -145,13 +164,26 @@ img, svg { max-width: 100%; }
 .hero h1 {
   font-family: var(--display);
   font-weight: 720;
-  font-size: clamp(2.4rem, 6.2vw, 5.4rem);
-  line-height: .97;
+  font-size: clamp(2.3rem, 5.6vw, 4.9rem);
+  line-height: .98;
   letter-spacing: -.028em;
   font-variation-settings: "opsz" 96, "wdth" 90;
-  margin: 0 0 clamp(36px, 5.5vw, 72px);
-  max-width: 15ch;
+  margin: 0 0 .32em;
+  max-width: 18ch;
   overflow-wrap: break-word;
+}
+.hero h1 .title-keep { white-space: nowrap; }
+.hero h1 .title-tag { font-weight: 380; color: var(--ink-2); letter-spacing: -.018em; white-space: nowrap; }
+.hero .subtitle {
+  font-family: var(--display);
+  font-weight: 420;
+  font-size: clamp(1.45rem, 2.9vw, 2.35rem);
+  line-height: 1.16;
+  letter-spacing: -.014em;
+  font-variation-settings: "opsz" 48, "wdth" 96;
+  color: var(--ink);
+  margin: 0 0 clamp(36px, 5.5vw, 72px);
+  max-width: 28ch;
 }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(36px, 6vw, 96px); align-items: start; }
 .standfirst p { margin: 0 0 1em; max-width: 40ch; }
@@ -282,7 +314,7 @@ img, svg { max-width: 100%; }
   .fig {
     height: auto; z-index: 5;
     top: calc(env(safe-area-inset-top, 0px) + var(--header-h));
-    background: var(--canvas);
+    background: var(--section-bg, var(--canvas));
     padding: 10px 0 10px;
     border-bottom: 1px solid var(--rule-soft);
     margin: 0 calc(-1 * clamp(20px, 4vw, 48px));
@@ -307,6 +339,12 @@ img, svg { max-width: 100%; }
 
 /* Shared section frame */
 .section { border-top: 1px solid var(--rule-soft); padding: clamp(64px, 9vw, 120px) 0; }
+.section, .debate { background: var(--section-bg, var(--canvas)); }
+#shifts { --section-bg: var(--t-sage); border-top-color: transparent; }
+#diamond { --section-bg: var(--t-clay); border-top-color: transparent; }
+#model { --section-bg: var(--t-butter); border-top-color: transparent; }
+#roles { --section-bg: var(--t-mist); border-top-color: transparent; }
+#takeaways { --section-bg: var(--t-sage); border-top-color: transparent; }
 .section-intro { max-width: 46rem; margin-bottom: clamp(28px, 4.5vw, 56px); }
 .section-intro h2 { font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 4.6vw, 3.6rem); letter-spacing: -.024em; line-height: 1; margin: 0 0 .45em; font-variation-settings: "opsz" 72, "wdth" 92; }
 .section-intro p { margin: 0; font-size: 1.2rem; max-width: 44ch; color: var(--ink-2); }
@@ -346,7 +384,7 @@ img, svg { max-width: 100%; }
 .timeline { list-style: none; margin: 1.6em 0; padding: 0; border-left: 1px solid var(--rule); }
 .timeline li { position: relative; padding: 0 0 22px 24px; max-width: 62ch; }
 .timeline li:last-child { padding-bottom: 4px; }
-.timeline li::before { content: ""; position: absolute; left: -6px; top: .42em; width: 11px; height: 11px; border-radius: 50%; background: var(--canvas); border: 2px solid var(--agent); }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: .42em; width: 11px; height: 11px; border-radius: 50%; background: var(--section-bg, var(--canvas)); border: 2px solid var(--agent); }
 .tl-date { display: block; font-size: .875rem; color: var(--ink-2); }
 .tl-what { display: block; font-weight: 600; margin: .1em 0 .2em; }
 .timeline p { margin: 0; font-size: 1rem; }
@@ -528,7 +566,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
 .adopt-y::after, .adopt-x::after { content: " \2192"; }
 .adopt-grid { grid-column: 2; grid-row: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 .adopt-x { grid-column: 2; grid-row: 2; margin: 0; text-align: center; font-size: .85rem; color: var(--ink-2); }
-.adopt-cell { background: var(--surface); background: color-mix(in srgb, var(--ink) calc(var(--s) * 1%), var(--canvas)); border-radius: 6px; padding: 18px 20px 20px; }
+.adopt-cell { background: var(--surface); background: color-mix(in srgb, var(--ink) calc(var(--s) * 1%), var(--section-bg, var(--canvas))); border-radius: 6px; padding: 18px 20px 20px; }
 .adopt-cell h4 { font-family: var(--display); font-weight: 650; font-size: 1.25rem; margin: 0 0 .3em; font-variation-settings: "opsz" 28; }
 .adopt-cell p { margin: 0; font-size: .95rem; color: var(--ink-2); }
 .adopt-cell .ad-share { font-family: var(--display); font-weight: 650; font-size: 2rem; line-height: 1; color: var(--ink); margin-bottom: .3em; font-variant-numeric: tabular-nums; }
@@ -615,7 +653,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#overview" data-jump="overview">UX workflow shifts (2026)<span class="brand-sub"> — A report</span></a>
+    <a class="brand" href="#overview" data-jump="overview">UX Workflow Shifts in 2026<span class="brand-sub"> — A report</span></a>
     <nav class="site-nav" aria-label="Sections">
       <a class="nav-link" href="#overview" data-jump="overview">Then and now</a>
       <a class="nav-link" href="#shifts" data-jump="shifts">Shifts</a>
@@ -631,14 +669,18 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
 <main>
   <section class="hero" id="overview">
     <div class="wrap">
-      <h1>The work moved upstream and into infrastructure.</h1>
+      <h1>UX Workflow Shifts <span class="title-keep">in 2026</span> <span class="title-tag">— A report</span></h1>
+      <p class="subtitle">The work moved upstream and into infrastructure</p>
       <div class="framing">
-        <div class="framing-inner">
+        <details class="intro" open>
+          <summary>Intro</summary>
+          <div class="framing-inner">
           <p>Since January 2025, when I was laid off from a climate-tech startup, I’ve spent more than 20 months watching and engaging with the shifts reshaping UX and the wider tech industry. I haven’t only observed the AI revolution. I’ve worked inside it, creating designs, plans and strategies for small AI startups pushing toward agentic workflows.</p>
           <p>My own workflow has changed too. AI is now my sparring partner: it checks my blind spots, generates first drafts of interactive prototypes, and lets me engage users and clients through live prototypes. But I still make maps, models and diagrams when I need to think through higher-order concepts or see something whole.</p>
-          <p>All the while, “AI and UX” reports kept appearing in my LinkedIn feed. I skimmed and parsed them one at a time, but I wanted to see what happens when they converge: which dots connect, and which patterns emerge in one giant, meta-level report. This is the result, and I wanted to share it with you. It’s built on an AI-generated analysis of those AI and UX reports, so there are many levels of meta going on here. I hope you find value in it. One pattern stood out to me most: as making gets cheap, the contested work is framing the problem, which is exactly what those maps and models are for.</p>
-          <p class="byline"><strong>Uday Gajendar</strong><a href="https://www.udanium.com">udanium.com</a><a href="https://www.linkedin.com/in/udanium">LinkedIn</a></p>
-        </div>
+          <p>All the while, “AI and UX” reports kept appearing in my LinkedIn feed. I skimmed and parsed them one at a time, but I wanted to see what happens when they converge: which dots connect, and which patterns emerge in one giant, meta-level report. This is the result, and I wanted to share it with you. It’s built on an AI-generated analysis of those AI and UX reports, so there are many levels of meta going on here. I hope you find value in it. <strong>One pattern stood out to me most: as making gets cheap, the contested work is framing the problem, which is exactly what those maps and models are for.</strong></p>
+          </div>
+        </details>
+        <p class="byline"><strong>Uday Gajendar</strong><a href="https://www.udanium.com">udanium.com</a><a href="https://www.linkedin.com/in/udanium">LinkedIn</a></p>
       </div>
       <div class="hero-grid">
         <div class="standfirst">
@@ -2123,7 +2165,7 @@ footer p { max-width: 70ch; margin: 0 0 .6em; }
   /* Summary */
   function summary() {
     var d = new Date();
-    var lines = ['# Design leader checklist', '', 'From “UX workflow shifts (2026) — A report” by Uday Gajendar. Progress as of ' + d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + ': ' + list().length + ' of ' + TOTAL + ' done.', ''];
+    var lines = ['# Design leader checklist', '', 'From “UX Workflow Shifts in 2026 — A report” by Uday Gajendar. Progress as of ' + d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) + ': ' + list().length + ' of ' + TOTAL + ' done.', ''];
     AREAS.forEach(function (a, ai) {
       lines.push('## ' + (ai + 1) + '. ' + a.name + ' (' + areaDone(ai) + ' of ' + a.items.length + ')', '');
       a.items.forEach(function (it, ii) { lines.push('- [' + (checked[idOf(ai, ii)] ? 'x' : ' ') + '] ' + it[0]); });
